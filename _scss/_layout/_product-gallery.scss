@@ -1,0 +1,54 @@
+section.gallery {
+    
+    .product {
+        @include flex-content-4;
+        position: relative;
+        border-bottom: 1px solid $grey;
+
+        .buy.snipcart-add-item {
+            min-width: 100%;
+        }
+
+        figure {
+            img {
+                padding: 0 0 ($base-spacing / 2);
+                margin: 0;
+            }
+
+            padding: 0 0 ($base-spacing / 2);
+            margin: $base-spacing auto ($base-spacing / 2);
+            background: white;
+
+            //width: calc(100% - #{$base-spacing});
+            box-shadow: $shadow;
+
+            figcaption {
+                text-align: right;
+                font-size: .8em;
+                opacity: .3;
+                margin: 0 ($base-spacing / 2);
+            }
+        }
+
+        #share-buttons {
+            padding: ($base-spacing * 2) 0;
+
+            h4 {
+                padding: $base-spacing 0;
+            }
+
+            .fa {
+                font-size: 1.5em;
+                margin: $base-spacing / 5;
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        a.buy {
+            @extend %button-1;
+        }
+    }
+}

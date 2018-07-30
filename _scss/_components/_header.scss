@@ -1,0 +1,59 @@
+header {
+    @include flex-container;
+
+    min-height: 400px;
+    background: $brand;
+    position: relative;
+    box-shadow: $shadow;
+    text-align: center;
+
+    h1 {
+        font-size: 4em;
+    }
+
+    img {
+        max-width: 120px;
+        margin: 10px 0 0 0;
+        transform: rotate(20deg);
+
+        @media (max-width: $small) {
+            max-width: 50px;
+            margin: 0 $base-spacing 0 0;
+            border-radius: 0;
+            box-shadow: 0 0 0 0;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            transform: rotate(0deg);
+            background: $brand;
+            padding: $base-spacing / 4;
+        }
+    }
+
+    &.product-page-header {
+        background: transparent;
+        box-shadow: none;
+        min-height: 100px;
+        text-decoration: underline;
+        padding: 0 $base-spacing;
+
+        h2 {
+            font-size: 4em;
+        }
+
+        @media (max-width: $small) {
+            min-height: 50px;
+            max-height: 50px;
+            background: $brand;
+            box-shadow: $shadow;
+            position: fixed;
+            top: 0;
+            z-index: 997;
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    }
+}

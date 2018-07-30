@@ -1,0 +1,6 @@
+@import "list_mixins";
+
+@mixin transition-all {
+    transition: all .02s ease-in;
+    transition: all .02s ease-out;
+}

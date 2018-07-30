@@ -1,0 +1,20 @@
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    margin: ($base-spacing * 2) auto 0;
+    background: $black;
+    color: $white;
+    padding: $base-spacing*2;
+
+    .footer-content {
+      @extend %centered-content;
+      padding:0;
+      a{
+          box-shadow: none;
+      }
+       
+    }
+}
+

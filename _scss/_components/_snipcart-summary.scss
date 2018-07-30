@@ -1,0 +1,17 @@
+.snipcart-summary {
+    position: fixed;
+    right: $base-spacing * 2;
+    top: $base-spacing * 1.5;
+    z-index: 999;
+    padding: $base-spacing/2 $base-spacing / 4;
+
+    @media (max-width: $small) {
+        right: 0;
+        top: 0;
+        height: 50px;
+        width: 50px;
+        background: $brand;
+        color:$black;
+
+    }
+}
