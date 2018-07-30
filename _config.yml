@@ -1,0 +1,72 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+###########################################################################
+## BASIC SITE VARIABLES ##
+###########################################################################
+title: Shapes ## Add your site title here
+subtitle: A micro-commerce Jekyll theme w/Snipcart ## Add your site subtitle here, this is useful for solcial sharing functions
+email: hello@discoform.com ## Add your email address here
+description: This is a Mockup, not an actual store ## Add your site description here
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://discoform.github.io/eCommerce-contentful" # the base hostname & protocol for your site, e.g. http://example.com
+logo: transparent-logo.png ## Replace this with your logo in assets/logos/logo.png
+###########################################################################
+## SOCIAL MEDIA ACCOUNT VARIABLES. ADD MORE OPTIONS AND EDIT _includes/site-social.html ##
+###########################################################################
+twitter_username: discoform #if you have a twitter username, add your username here
+github_username: discoform #if you have a github account, add your username here
+linkedIn_username: matthew-h-49303a139/ #if you have a LinkedIn account, add your username here
+instagram_username: #if you have a Instagram account, add your username here
+###########################################################################
+## COLLECTIONS FOR PRODUCTS ##
+###########################################################################
+collections:
+      products:
+        output: true
+        permalink: /product/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+###########################################################################
+## DEVELOPER CREDITS ##
+###########################################################################
+author: discoform
+authorURL: https://discoform.com
+###########################################################################
+## SNIPCART API ## 
+###########################################################################
+Snipcart_API: ##Log in to your Snipcart account and go here: https://app.snipcart.com/dashboard/account/credentials
+###########################################################################
+## STANDARD BUILD and DEV SETTINGS ##
+###########################################################################
+# Build settings
+markdown: kramdown
+# theme: minima
+plugins:
+ # - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+    sass_dir: _scss
+    sass:
+    style: compressed
+

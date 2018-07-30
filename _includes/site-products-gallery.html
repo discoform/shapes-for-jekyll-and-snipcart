@@ -1,0 +1,21 @@
+{% for product in site.products %}
+<div class="product">
+    <a href="{{ site.url }}{{ product.url }}">
+        <h1>{{ product.title }}</h1>
+    </a>
+    {% if product.subtitle %}
+    <h3>{{ product.subtitle }}</h3>
+    {% endif %} {% if product.featured_image %}
+    <figure>
+        <a href="{{ site.url }}{{ product.url }}">
+            <img src="{{ site.url }}/assets/images/product-images/{{product.featured_image}}" alt="Product Image">
+        </a>
+        <figcaption>{{ product.imageCaption }}</figcaption>
+    </figure>
+    {% endif %} 
+     {% if product.subtitle %}{{product.excerpt}}{% endif %} {% if product.quantity
+    < 1 %}<h3>Sorry, sold out</h3>
+        {% else %} {% include site-snipcart-button.html %} {% endif %} {% include site-share.html %}
+        <!-- end .product -->
+</div>
+{% endfor %}

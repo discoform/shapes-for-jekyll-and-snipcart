@@ -1,0 +1,29 @@
+<nav id="social">
+    <ul>
+        {% if site.twitter_username %}
+        <li>
+            <a href="https://twitter.com/{{ site.twitter_username }}">
+                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+        </li>
+        {% endif %} {% if site.github_username %}
+        <li>
+            <a href="https://github.com/{{ site.github_username }}">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+            </a>
+        </li>
+        {% endif %} {% if site.linkedIn_username %}
+        <li>
+            <a href="https://www.linkedin.com/in/{{ site.linkedIn_username }}">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+        </li>
+        {% endif %} {% if site.instagram_username %}
+        <li>
+            <a href="https://www.instagram.com/{{ site.instagram_username }}">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
