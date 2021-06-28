@@ -22,7 +22,7 @@ subtitle: A micro-commerce Jekyll theme w/Snipcart ## Add your site subtitle her
 email: hello@discoform.com ## Add your email address here
 description: This is a Mockup, not an actual store ## Add your site description here
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://discoform.github.io/Shapes/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 logo: transparent-logo.png ## Replace this with your logo in assets/logos/logo.png
 ###########################################################################
 ## SOCIAL MEDIA ACCOUNT VARIABLES. ADD MORE OPTIONS AND EDIT _includes/site-social.html ##
