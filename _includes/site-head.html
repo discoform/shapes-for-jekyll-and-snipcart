@@ -1,95 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
 
 <head>
-    <!-- Basic Page Needs
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8"> {% if page.url == "/" %}
-    <title>{{ site.title }} | {{ site.subtitle }}</title>
-    <meta name="description" content="{{ site.title }} | {{ site.subtitle }} | {{site.description}}"> {% else %}
-    <title>{{ site.title }} | {{ page.title }}</title>
-    <meta name="description" content="{{ page.title }} | {{ site.title }} | {{ site.subtitle }} | {{site.description}}"> {% endif %}
-    <meta name="author" content="{{site.author}}">
-    <!-- Mobile Specific Metas
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="{{"/assets/images/favicons/favicon.png"| prepend: site.url }}">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="{{"/assets/images/favicons/apple-touch-icon-57x57.png
-        " | prepend: site.url }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{"/assets/images/favicons/apple-touch-icon-60x60.png
-        " | prepend: site.url }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{"/assets/images/favicons/apple-touch-icon-72x72.png
-        " | prepend: site.url }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{"/assets/images/favicons/apple-touch-icon-76x76.png
-        " | prepend: site.url }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{"/assets/images/favicons/apple-touch-icon-114x114.png
-        " | prepend: site.url }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{"/assets/images/favicons/apple-touch-icon-120x120.png
-        " | prepend: site.url }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{"/assets/images/favicons/apple-touch-icon-144x144.png
-        " | prepend: site.url }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{"/assets/images/favicons/apple-touch-icon-152x152.png
-        " | prepend: site.url }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{"/assets/images/favicons/apple-touch-icon-180x180.png
-        " | prepend: site.url }}">
-    <link rel="icon" type="image/png" href="{{"/assets/images/favicons/favicon-32x32.png " | prepend: site.url }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{"/assets/images/favicons/favicon-194x194.png " | prepend: site.url }}" sizes="194x194">
-    <link rel="icon" type="image/png" href="{{"/assets/images/favicons/favicon-96x96.png " | prepend: site.url }}" sizes="96x96">
-    <link rel="icon" type="image/png" href="{{"/assets/images/favicons/android-chrome-192x192.png
-        " | prepend: site.url }}" sizes="192x192">
-    <link rel="icon" type="image/png" href="{{"/assets/images/favicons/favicon-16x16.png " | prepend: site.url }}" sizes="16x16">
-    <link rel="manifest" href="{{"/assets/images/favicons/manifest.json " | prepend: site.url }}">
-    <link rel="mask-icon" href="{{"/assets/images/favicons/safari-pinned-tab.svg " | prepend: site.url }}" color="#231f20">
-    <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
-    <meta name="application-name" content="{{ site.title }}">
-    <meta name="msapplication-TileColor" content="#231f20">
-    <meta name="msapplication-TileImage" content="{{"/assets/images/favicons/mstile-144x144.png
-        " | prepend: site.url }}">
-    <meta name="theme-color" content="#231f20">
-    <!-- Base URL –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon.png">
     <link rel="canonical" href="{{ site.url }}">
-    <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="/css/style.css">
-    <!-- Social Media –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="{{site.twitter_username}}">
-    <meta name="twitter:creator" content="{{site.twitter_username}}">{% if page.title %}
-    <meta name="twitter:title" content="{{ page.title }} | {{site.title}}">{% else %}
-    <meta name="twitter:title" content="{{ site.title }}"> {% endif %}{% if page.url %}
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">{% endif %}{% if page.description %}
-    <meta name="twitter:description" content="{{ page.description }}">{% else %}
-    <meta name="twitter:description" content="{{ site.description }}">{% endif %}{% if page.featured_image %}
-    <meta name="twitter:image:src" content="{{ site.url }}/assets/product-images/{{page.featured_image}}">{% else %}
-    <meta name="twitter:image:src" content="{{ site.url }}/assets/logos/logo.png"> {% endif %}
-    <meta content="{{ site.title }}" property="og:site_name">{% if page.title %}
-    <meta content="{{ page.title }} | {{page.author}}" property="og:title">{% else %}
-    <meta content="{{ site.title }}" property="og:title"> {% endif %}{% if page.title %}
-    <meta content="article" property="og:type"> {% else %}
-    <meta content="website" property="og:type">{% endif %}{% if page.description %}
-    <meta content="{{ page.description }}" property="og:description"> {% else %}
-    <meta content="{{ site.description }}" property="og:description">{% endif %}{% if page.url %}
-    <meta content="{{ site.url }}{{ page.url }}" property="og:url">{% endif %}{% if page.date %}
-    <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-    <meta content="{{ site.url }}/about/" property="article:author">{% endif %} {% if page.featured_image %}
-    <meta content="{{ site.url }}/assets/product-images/{{page.featured_image}}" property="og:image">{% else %}
-    <meta content="{{ site.url }}{{ site.url }}/assets/logos/logo.png" property="og:image">{% endif %}{% if page.categories %}{% for category in page.categories limit:1 %}
-    <meta content="{{ category }}" property="article:section">{% endfor %}{% endif %}{% if page.tags %}{% for tag in page.tags %}
-    <meta content="{{ tag }}" property="article:tag">{% endfor %} {% endif %}
-    <!-- Enable iOS Standalone Mode –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="{{ site.url }}/touch-icon-iphone.png">
-   
-   </head>
+    {% seo %}
+</head>
 <body>
     <div class="snipcart-summary">
         <a href="#" class="snipcart-checkout">
@@ -97,6 +15,3 @@
             (<span class="snipcart-total-items">0</span>)
         </a>
     </div>
-    <!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
