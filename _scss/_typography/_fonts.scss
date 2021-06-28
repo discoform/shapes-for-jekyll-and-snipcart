@@ -1,5 +1,5 @@
-$headings:  'Bebas Neue', cursive;
-$body: 'Roboto Slab', serif;
+$headings: Impact, Helvetica, sans-serif;
+$body: Arial, Helvetica, sans-serif;
 body {
     font-family: $body;
 }
@@ -23,24 +23,16 @@ h2 {
     line-height: 3rem;
 }
 
-h3 {
-    font-size: 1.114rem;
-}
-
-h4 {
-    font-size: 0.707rem;
-}
-
-h5 {
-    font-size: 0.4713333333333333rem;
-}
-
+h3,
+h4,
+h5,
 h6 {
-    font-size: 0.3535rem;
+    font-size: 1.514rem;
 }
 
 /* Paragraphs and Links */
-p, a {
+p,
+a {
     font-size: 1em;
     line-height: 1.5;
 }
