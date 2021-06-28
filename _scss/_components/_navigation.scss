@@ -1,9 +1,14 @@
-nav#social {
-    padding:$base-spacing;;
+ul.social-follow-links {
     display: flex;
-    @include inline-list-centered;
-
-    .fa {
-        font-size: 1.75em;
+    justify-content: flex-start;
+    li a {
+        margin: $base-spacing/4;
+        &:first-of-type {
+            margin-left: 0;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 }

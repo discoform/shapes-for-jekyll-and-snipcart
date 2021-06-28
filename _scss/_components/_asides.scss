@@ -1,8 +1,7 @@
 aside {
     margin: $base-spacing auto;
     padding: ($base-spacing / 2) $base-spacing;
-float: left;
-    @include inline-list-left;
+    float: left;
 
     a {
         text-decoration: underline;

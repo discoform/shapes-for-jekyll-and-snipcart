@@ -30,22 +30,7 @@ section.gallery {
             }
         }
 
-        #share-buttons {
-            padding: ($base-spacing * 2) 0;
 
-            h4 {
-                padding: $base-spacing 0;
-            }
-
-            .fa {
-                font-size: 1.5em;
-                margin: $base-spacing / 5;
-
-                &:first-of-type {
-                    margin-left: 0;
-                }
-            }
-        }
 
         a.buy {
             @extend %button-1;
