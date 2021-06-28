@@ -1,5 +1,4 @@
 section.gallery {
-    
     .product {
         @include flex-content-4;
         position: relative;
@@ -21,16 +20,7 @@ section.gallery {
 
             //width: calc(100% - #{$base-spacing});
             box-shadow: $shadow;
-
-            figcaption {
-                text-align: right;
-                font-size: .8em;
-                opacity: .3;
-                margin: 0 ($base-spacing / 2);
-            }
         }
-
-
 
         a.buy {
             @extend %button-1;

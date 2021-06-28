@@ -48,3 +48,9 @@ p a {
         transition: all ease 0.3s;
     }
 }
+figcaption {
+    text-align: right;
+    font-size: 0.8em;
+    opacity: 0.6;
+    margin: 0 ($base-spacing / 2);
+}
