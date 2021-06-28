@@ -1,0 +1,16 @@
+#share-buttons {
+    padding: ($base-spacing * 2) 0;
+    strong {
+        display: block;
+        margin: $base-spacing / 5 0;
+    }
+
+    img {
+        width: $base-spacing;
+        height: $base-spacing;
+        margin: $base-spacing / 5;
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+}

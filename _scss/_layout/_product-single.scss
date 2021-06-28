@@ -61,24 +61,5 @@ section.single-product {
 
             float: left;
         }
-
-        #share-buttons {
-            padding: ($base-spacing * 2) 0;
-            width: 100%;
-            float: left;
-
-            h4 {
-                padding: $base-spacing 0;
-            }
-
-            .fa {
-                font-size: 1.5em;
-                margin: $base-spacing / 5;
-
-                &:first-of-type {
-                    margin-left: 0;
-                }
-            }
-        }
     }
 }

@@ -27,10 +27,10 @@ logo: transparent-logo.png ## Replace this with your logo in assets/logos/logo.p
 ###########################################################################
 ## SOCIAL MEDIA ACCOUNT VARIABLES. ADD MORE OPTIONS AND EDIT _includes/site-social.html ##
 ###########################################################################
-twitter_username: discoform #if you have a twitter username, add your username here
-github_username: discoform #if you have a github account, add your username here
-linkedIn_username: matthew-h-49303a139/ #if you have a LinkedIn account, add your username here
-instagram_username: #if you have a Instagram account, add your username here
+twitter_username: twitter #if you have a twitter username, add your username here
+github_username: github #if you have a github account, add your username here
+linkedIn_username: linkedin/ #if you have a LinkedIn account, add your username here
+instagram_username: instagram #if you have a Instagram account, add your username here
 ###########################################################################
 ## COLLECTIONS FOR PRODUCTS ##
 ###########################################################################
