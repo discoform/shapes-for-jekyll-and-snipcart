@@ -5,7 +5,7 @@
         if p.navigation_weight
         %}
         <li>
-            <a href="{{site.url}}{{ p.url }} " {% if p.url==page.url %} class="active" {% endif %}>{{ p.title }}</a>
+            <a href="{{ p.url }} " {% if p.url==page.url %} class="active" {% endif %}>{{ p.title }}</a>
         </li>
         {% endif %} {% endfor %}
     </ul>
