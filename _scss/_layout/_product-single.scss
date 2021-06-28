@@ -47,13 +47,6 @@ section.single-product {
             @media (max-width: $small) {
                 box-shadow: none;
             }
-
-            figcaption {
-                text-align: right;
-                font-size: .8em;
-                opacity: .3;
-                margin: 0 ($base-spacing / 2);
-            }
         }
 
         .title-and-description {
