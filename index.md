@@ -3,6 +3,6 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
-title: Home
+title: Shapes Micro-Commerce with Snipcart
 navigation_weight: 1
 ---
