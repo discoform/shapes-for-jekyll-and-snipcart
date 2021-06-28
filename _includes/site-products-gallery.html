@@ -1,14 +1,14 @@
 {% for product in site.products %}
 <div class="product">
-    <a href="{{ site.url }}{{ product.url }}">
+    <a href="{{ product.url }}">
         <h1>{{ product.title }}</h1>
     </a>
     {% if product.subtitle %}
     <h3>{{ product.subtitle }}</h3>
     {% endif %} {% if product.featured_image %}
     <figure>
-        <a href="{{ site.url }}{{ product.url }}">
-            <img src="{{ site.url }}/assets/images/product-images/{{product.featured_image}}" alt="Product Image">
+        <a href="{{ product.url }}">
+            <img src="/assets/images/product-images/{{product.featured_image}}" alt="Product Image" width="400" height="400">
         </a>
         <figcaption>{{ product.imageCaption }}</figcaption>
     </figure>

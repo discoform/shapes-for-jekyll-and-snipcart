@@ -5,9 +5,10 @@
         {% if page.quantity
         < 1 %} <div class="sold-out">
             <h3>Sorry, sold out</h3>
-                </div>
+</div>
 {% endif %}
-<img src="{{ site.url }}/assets/images/product-images/{{page.featured_image}}" alt="Product Image">
+<img src="/assets/images/product-images/{{page.featured_image}}" alt="Product Image" width="400"
+    height="400">
 <figcaption>{{ page.imageCaption }}</figcaption>
 </figure>
 {% endif %}
