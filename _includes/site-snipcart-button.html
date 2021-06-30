@@ -3,17 +3,13 @@
         <h4>sold</h4>
         </div>
         {% else %} {% if page.url == "/" %}
-        <button class="buy snipcart-add-item snipcart-button-primary snipcart-base-button" data-item-id="{{ product.slug }}" data-item-name="{{ product.title }}"
-                data-item-price="{{ product.price }}" data-item-weight="{{ product.weight }}"
-                data-item-url="{{ site.url }}{{ product.url }}"
-                data-item-image="{{ site.url }}/assets/images/product-images/{{product.featured_image}}"
-                data-item-description="{{product.excerpt}}">
-                Add to Cart
-        </button>
+        <a href="{{product.url}}"> <button class="snipcart-button-primary snipcart-base-button">
+                        <strong>Purchase Info →</strong>
+                </button></a>
         {% else %}
-        <button class="buy snipcart-add-item snipcart-button-primary snipcart-base-button" data-item-id="{{ page.slug }}" data-item-name="{{ page.title }}"
-                data-item-price="{{ page.price }}" data-item-weight="{{ page.weight }}"
-                data-item-url="{{ site.url }}{{ page.url }}"
+        <button class="buy snipcart-add-item snipcart-button-primary snipcart-base-button"
+                data-item-id="{{ page.slug }}" data-item-name="{{ page.title }}" data-item-price="{{ page.price }}"
+                data-item-weight="{{ page.weight }}" data-item-url="{{ site.url }}{{ page.url }}"
                 data-item-image="{{ site.url }}/assets/images/product-images/{{page.featured_image}}"
                 data-item-description="{{page.excerpt}}">
                 Add to Cart

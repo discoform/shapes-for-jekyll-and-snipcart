@@ -5,7 +5,7 @@ header {
     max-width: $max-width;
     display: flex;
     justify-content: space-between;
-    margin: $base-spacing auto;
+    margin: $base-spacing auto $base-spacing*4;
     padding: 0 $base-spacing * 2;
 
     > div:first-of-type {

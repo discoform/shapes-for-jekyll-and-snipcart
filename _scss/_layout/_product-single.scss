@@ -1,4 +1,4 @@
-.product {
+body.product .product {
     display: grid;
     grid-column: 1 / 4;
     .product-images {
@@ -6,9 +6,10 @@
         position: relative;
         figure {
             max-width: 640px;
-            margin: auto;
+
             img {
                 margin-top: unset;
+                box-shadow: $shadow;
             }
         }
     }
@@ -41,6 +42,7 @@
             select {
                 border: none;
                 cursor: pointer;
+                background-color: transparent;
             }
         }
     }
@@ -49,9 +51,7 @@
         grid-column: 1 / 4;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        background-color: $white;
         margin: $base-spacing * 4 0 0;
-        padding: $base-spacing * 2;
     }
 }
 
