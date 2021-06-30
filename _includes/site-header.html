@@ -1,8 +1,29 @@
-<header>
-    <span>
-        <img src="/assets/logos/{{site.logo}}" alt="{{site.title}} Site Logo" width="400" height="400">
-        <h1>{{site.title}}</h1>
-        <h2>{{site.subtitle}}</h2>
-        {% include site-credits.html %}
-    </span>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon.png">
+    <link rel="canonical" href="{{ site.url }}">
+    <link rel="stylesheet" href="/css/style.css">
+    {% seo %}
+</head>
+
+<body>
+    <header class="site-header">
+        <div>
+            <a href="/">
+            {% if site.logo %}
+            <img src="/assets/logos/{{site.logo}}" alt="{{site.title}} Site Logo" width="400" height="400">
+            {% else %}
+            <h1>{{site.title}}</h1>
+            {% endif %}
+            </a>
+        </div>
+        <div class="snipcart-summary">
+            <a href="#" class="snipcart-checkout">
+                <img src="/assets/icons/cart.svg" alt="View Shopping Cart" width="24" height="24">
+            </a>
+        </div>
+    </header>
+    <main role="main">

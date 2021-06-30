@@ -15,7 +15,9 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     // better box-sizing (opinionated)
     box-sizing: inherit;
 }
@@ -317,6 +319,7 @@ li {
 ul li {
     list-style-type: none;
     list-style-position: inside;
+    line-height: 1.5;
 }
 
 p,
@@ -411,13 +414,6 @@ optgroup {
 }
 
 button {
-    @extend %button-1;
-
-    @include flex-content-3;
-
-    width: 100%;
-    color: $white;
-    margin: 0 0 $base-spacing;
-
-   
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

@@ -1,0 +1,38 @@
+header {
+    @media (max-width: $small) {
+        //    add mobile styles here
+    }
+    max-width: $max-width;
+    display: flex;
+    justify-content: space-between;
+    margin: $base-spacing auto;
+    padding: 0 $base-spacing * 2;
+
+    > div:first-of-type {
+        display: grid;
+        gap: $base-spacing/2;
+        max-width: $max-width;
+        align-items: center;
+
+        h1 {
+            grid-column: 2;
+            grid-row: 1;
+
+        }
+
+        img {
+            grid-column: 1;
+            grid-row: 1;
+            max-width: 100px;
+            height: auto;
+        }
+    }
+    .snipcart-summary{
+        margin: auto 0 auto auto;
+        img{
+            width: $base-spacing*2;
+            height: auto;
+        }
+
+    }
+}
