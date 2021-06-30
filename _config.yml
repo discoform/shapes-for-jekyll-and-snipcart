@@ -54,6 +54,7 @@ Snipcart_API: MGU4ZGQ1YjItZWU3Ni00OTkwLWE0NzMtMmZhYWVjZjIxODc5NjM2MjgzOTM4OTY3Mj
 ###########################################################################
 plugins:
   - jekyll-seo-tag
+  - jekyll-autoprefixer
 
 
 ###########################################################################

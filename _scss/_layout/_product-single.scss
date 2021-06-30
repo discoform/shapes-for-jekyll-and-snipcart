@@ -49,7 +49,6 @@
         grid-column: 1 / 4;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        background-color: $white;
         margin: $base-spacing * 4 0 0;
         padding: $base-spacing * 2;
     }
