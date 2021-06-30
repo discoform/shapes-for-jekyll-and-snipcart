@@ -31,13 +31,12 @@ h6 {
 /* Paragraphs and Links */
 p,
 a {
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: lighter;
     line-height: 1.5;
-
 }
 
-a{
+a {
     display: inline-block;
 }
 
@@ -53,8 +52,6 @@ p a {
     }
 }
 figcaption {
-    text-align: right;
     font-size: 0.8em;
     opacity: 0.6;
-    margin: 0 ($base-spacing / 2);
 }

@@ -1,0 +1,12 @@
+body.home .product-gallery {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $base-spacing * 2;
+
+    article {
+        a {
+            min-width: 100%;
+        }
+    }
+}
