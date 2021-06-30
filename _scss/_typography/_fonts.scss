@@ -15,12 +15,10 @@ h6 {
 
 h1 {
     font-size: 2.242rem;
-    line-height: 4.5rem;
 }
 
 h2 {
     font-size: 1.428rem;
-    line-height: 3rem;
 }
 
 h3,
@@ -33,7 +31,8 @@ h6 {
 /* Paragraphs and Links */
 p,
 a {
-    font-size: 1em;
+    font-size: .9rem;
+    font-weight: lighter;
     line-height: 1.5;
 
 }

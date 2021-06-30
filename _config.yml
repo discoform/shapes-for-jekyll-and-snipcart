@@ -23,7 +23,7 @@ email: hello@discoform.com ## Add your email address here
 description: This is a Mockup, not an actual store ## Add your site description here
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shapes-for-jekyll-and-snipcart.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
-logo: transparent-logo.png ## Replace this with your logo in assets/logos/logo.png
+logo: shapes-logo.svg ## Replace this with your logo in assets/logos/logo.png
 ###########################################################################
 ## SOCIAL MEDIA ACCOUNT VARIABLES. ADD MORE OPTIONS AND EDIT _includes/site-social.html ##
 ###########################################################################
@@ -54,6 +54,7 @@ Snipcart_API: MGU4ZGQ1YjItZWU3Ni00OTkwLWE0NzMtMmZhYWVjZjIxODc5NjM2MjgzOTM4OTY3Mj
 ###########################################################################
 plugins:
   - jekyll-seo-tag
+
 
 ###########################################################################
 ## STANDARD BUILD and DEV SETTINGS ##

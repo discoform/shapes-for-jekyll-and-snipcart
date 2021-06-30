@@ -1,6 +1,28 @@
-{% include site-head.html %} {% include site-header.html %}
-<main role="main">
-    <section class="the-content gallery">
-        {% include site-products-gallery.html %}
-    </section>
-    {% include site-footer.html %}
+{% include site-header.html %}
+{% for product in site.products %}
+<article class="product">
+    <a href="{{ product.url }}">
+        <h1>{{ product.title }}</h1>
+    </a>
+    {% if product.subtitle %}
+    <h2>{{ product.subtitle }}</h2>
+    {% endif %}
+    {% if product.featured_image %}
+    <figure>
+        <a href="{{ product.url }}">
+            <img src="/assets/images/product-images/{{product.featured_image}}" alt="Product Image" width="400"
+                height="400">
+        </a>
+        <figcaption>{{ product.imageCaption }}</figcaption>
+    </figure>
+    {% endif %}
+    {% if product.subtitle %}
+    {{product.excerpt}}
+    {% endif %}
+    {% if product.quantity < 1 %}
+    <h3>Sorry, sold out</h3>
+     {% else %}
+    {% include site-snipcart-button.html %} {% endif %}
+</article>
+{% endfor %}
+{% include site-footer.html %}

@@ -1,15 +1,13 @@
-main {
-    max-width: $max-width;
-    margin: auto;
-
-    section {
-        margin: $base-spacing auto;
-    }
-
-    .the-content {
-       @include flex-container;
-
-     
-    }
+body {
+    background-color: $grey;
 }
 
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $base-spacing;
+    max-width: $max-width;
+    margin: auto;
+    padding-left: $base-spacing * 2;
+    padding-right: $base-spacing * 2;
+}
