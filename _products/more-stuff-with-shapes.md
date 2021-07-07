@@ -1,33 +1,34 @@
 ---
-title: Green Cactus
-description: Cactus Plant includes your choice of planter pot
-image: green-cactus.jpg
-imageCaption: Photo of a cactus by Daria Liudnaya from Pexels
+title: More stuff with Shapes
+description: Arrange your shapes on a vibrant, colorful surface. Select from three different color options
+image: more-stuff-with-shapes-and-bottle-with-notebook.jpg
+imageCaption: Shapes and a Notebook. Photo by Daria Liudnaya from Pexels
 thumbnail_images:
-    - image: green-cactus-with-colorful-shapes.jpg
-      caption: Green Cactus with colorful shapes, by Daria Liudnaya from Pexels
-    - image: green-cactus-on-colorful-shapes.jpg
-      caption: Green Cactus on colorful shapes, by Daria Liudnaya from Pexels
-    - image: green-cactus-on-monstera-leaf.jpg
-      caption: Green Cactus on a Monstera leaf, by Daria Liudnaya from Pexels
-price: 150.00
-weight: 15
+    - image: more-stuff-with-shapes-and-bottle.jpg
+      caption: Shapes and a bottle, by Daria Liudnaya from Pexels
+    - image: more-stuff-with-shapes-and-bottles.jpg
+      caption: Shapes and bottles, by Daria Liudnaya from Pexels
+    - image: more-stuff-with-shapes-and-jar.jpg
+      caption: Shapes and a jar, by Daria Liudnaya from Pexels
+price: 240.00
+weight: 10
 quantity: 1
-shipping_time: 3 weeks
+shipping_time: 5-6 weeks
 product_options:
     - dataID: custom1
     # dataID Must follow the convention 'custom{integer}' in order to fully integrate the options into the shopping cart
-      title: Pot Color
+      title: Surface Color
       options:
-      - red
-      - yellow
-      - green
+      - Purple
+      - Yellow
+      - Blue
     - dataID: custom2
     # dataID Must follow the convention 'custom{integer}' in order to fully integrate the options into the shopping cart
-      title: Soil Type
+      title: Surface Size
       options:
-      - high density
-      - low density
+      - 3' x 3'
+      - 6' x 6'
+      - 12' x 12'
 product_info_tabs:
     - title: Pot Color
       list_items:
@@ -42,7 +43,7 @@ slug: Green-cactus
 category: plants
 tags: [little, Green, Plant]
 published: true
-
+featured: true
 ---
 
 Many species of cactus have long, sharp spines, like this Opuntia. A cactus (plural cacti, cactuses, or less commonly, cactus) is a member of the plant family Cactaceae, a family comprising about 127 genera with some 1750 known species of the order Caryophyllales.

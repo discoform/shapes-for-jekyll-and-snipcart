@@ -1,8 +1,6 @@
 {% include site-header.html %}
 <article class="product">
-    {% if page.image or page.thumbnail_images %}
-        {% include product-gallery.html %}
-    {% endif %}
+
     <section class="title-and-description">
         <div>
             <h1>{{ page.title }}</h1>
@@ -11,18 +9,23 @@
                 <li><strong>Weight:</strong> {{page.weight}} ounces</li>
                 <li><strong>Shipping Time:</strong> {{page.shipping_time}}</li>
             </ul>
-            {% if page.quantity < 1 %} <div class="sold-out"><span>Sorry, sold out</span>
-        </div>
-        {% else %}
-        <span class="product-price">${{page.price}}</span>
-        {% if page.product_options %}
-        {% include product-options.html %}
-        {% endif %}
-        {% include site-snipcart-button.html %}
-        {% endif %}
+            {% if page.quantity < 1 %}
+            <div class="sold-out"><span>Sorry, sold out</span>
+            {% else %}
+                <span class="product-price">${{page.price}}</span>
+                <div class="options-and-purchase">
+                    {% if page.product_options %}
+                    {% include product-options.html %}
+                    {% endif %}
+                    {% include site-snipcart-button.html %}
+                    {% endif %}
+                </div>
         </div>
         {% include site-share.html %}
     </section>
+    {% if page.image or page.thumbnail_images %}
+    {% include product-gallery.html %}
+    {% endif %}
     {% if page.product_info_tabs %}
     {% include product-info-tabs.html %}
     {% endif %}

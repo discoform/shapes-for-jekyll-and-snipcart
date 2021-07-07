@@ -6,6 +6,7 @@ body.product .product {
     }
     .product-images {
         grid-column: 1 / 4;
+        grid-row: 1;
         display: grid;
         gap: $base-spacing;
 
@@ -51,14 +52,13 @@ body.product .product {
 
             img {
                 cursor: pointer;
+
             }
         }
     }
     .title-and-description {
         grid-column: 1 / 4;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        grid-row: 2;
 
         > div {
             padding: $base-spacing;
@@ -71,6 +71,8 @@ body.product .product {
         @media (min-width: $large) {
             max-width: 360px;
             grid-column: 3 / 4;
+            grid-row: 1;
+
             margin-left: auto;
             margin-right: 0;
         }
@@ -80,33 +82,32 @@ body.product .product {
         }
 
         .product-price {
+            display: block;
             font-size: 2.5rem;
             font-weight: bolder;
-            display: block;
             margin-top: $base-spacing/2;
             margin-bottom: $base-spacing/2;
         }
 
-        .product-options .product-option {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid $black;
-            margin: $base-spacing 0;
-            padding: $base-spacing/2 0;
-            font-size: 0.8rem;
-            font-weight: bolder;
-
-            select {
-                border: none;
-                cursor: pointer;
-                background-color: transparent;
-                padding-right: $base-spacing/2;
-            }
-        }
-
-        .product-options,
-        button {
+        .options-and-purchase {
             max-width: 320px;
+
+            .product-options .product-option {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid $black;
+                margin: $base-spacing 0;
+                padding: $base-spacing/2 0;
+                font-size: 0.8rem;
+                font-weight: bolder;
+
+                select {
+                    border: none;
+                    cursor: pointer;
+                    background-color: transparent;
+                    padding-right: $base-spacing/2;
+                }
+            }
         }
     }
 
@@ -114,12 +115,14 @@ body.product .product {
         grid-column: 1 / 4;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        @media (min-width: $xl) {
         margin: $base-spacing * 4 0 0;
+        }
     }
 
     .additional-info {
         grid-column: 1 / 4;
-        @media (min-width: $large) {
+        @media (min-width: $xl) {
             margin: $base-spacing * 4 0 0;
         }
 
