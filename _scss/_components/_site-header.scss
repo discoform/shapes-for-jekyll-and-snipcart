@@ -13,8 +13,11 @@ header {
         padding: 0 $base-spacing;
     }
     @media (min-width: $large) {
-        margin: $base-spacing auto $base-spacing * 4;
+        margin: $base-spacing auto;
         padding: 0 $base-spacing * 2;
+    }
+    @media (min-width: $xl) {
+        margin: $base-spacing auto $base-spacing * 3;
     }
 
     > div:first-of-type {
@@ -41,12 +44,12 @@ header {
         img,
         svg {
             width: $base-spacing * 2;
-            height: auto;
+            height: $base-spacing * 2;
             color: $black;
         }
         .snipcart-items-count {
             position: absolute;
-            top: $base-spacing*1.35;
+            top: $base-spacing * 1.35;
             left: $base-spacing/1.2;
         }
     }
