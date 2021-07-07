@@ -1,0 +1,24 @@
+<!-- The expanding image container -->
+<section class="product-images">
+    <div class="gallery-container">
+        <figure>
+            <img id="expandedImg" src="/assets/images/product-images/{{page.image}}" alt="{{page.imageCaption}}"
+                width="400" height="400">
+            <figcaption id="imgtext">{{ page.imageCaption }}</figcaption>
+        </figure>
+    </div>
+    {% if page.thumbnail_images %}
+    <div class="image-gallery column">
+        <figure class="column">
+            <img src="/assets/images/product-images/{{page.image}}" alt="{{page.imageCaption}}" width="200" height="400"
+                onclick="myFunction(this);">
+        </figure>
+        {% for item in page.thumbnail_images %}
+        <figure class="column">
+            <img src="/assets/images/product-images/{{item.image}}" alt="{{item.caption}}" width="200" height="400"
+                onclick="myFunction(this);">
+        </figure>
+        {% endfor %}
+    </div>
+    {% endif %}
+</section>

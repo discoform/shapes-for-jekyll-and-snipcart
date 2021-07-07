@@ -9,5 +9,15 @@
     </div>
 </footer>
 {% include site-snipcart-assets.html %}
+{% if page.layout == 'product' %}
+<script src="/js/gallery-images.js"></script>
+
+<script src="/js/tabbed-content.js"></script>
+<script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+{% endif %}
 </body>
+
 </html>

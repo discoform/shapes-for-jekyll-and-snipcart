@@ -1,12 +1,21 @@
 header {
-    @media (max-width: $small) {
-        //    add mobile styles here
-    }
     max-width: $max-width;
     display: flex;
     justify-content: space-between;
-    margin: $base-spacing auto $base-spacing*4;
-    padding: 0 $base-spacing * 2;
+
+    @media (max-width: $medium) {
+        margin: 0 auto;
+        padding: 0 $base-spacing / 2;
+    }
+
+    @media (min-width: $medium) and (max-width: $large) {
+        margin: 0 auto $base-spacing;
+        padding: 0 $base-spacing;
+    }
+    @media (min-width: $large) {
+        margin: $base-spacing auto $base-spacing * 4;
+        padding: 0 $base-spacing * 2;
+    }
 
     > div:first-of-type {
         display: grid;
@@ -17,7 +26,6 @@ header {
         h1 {
             grid-column: 2;
             grid-row: 1;
-
         }
 
         img {
@@ -27,12 +35,19 @@ header {
             height: auto;
         }
     }
-    .snipcart-summary{
+    .snipcart-summary {
+        position: relative;
         margin: auto 0 auto auto;
-        img{
-            width: $base-spacing*2;
+        img,
+        svg {
+            width: $base-spacing * 2;
             height: auto;
+            color: $black;
         }
-
+        .snipcart-items-count {
+            position: absolute;
+            top: $base-spacing*1.35;
+            left: $base-spacing/1.2;
+        }
     }
 }
