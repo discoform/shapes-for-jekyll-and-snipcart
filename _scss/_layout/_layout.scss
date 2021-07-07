@@ -8,6 +8,14 @@ main {
     gap: $base-spacing;
     max-width: $max-width;
     margin: auto;
-    padding-left: $base-spacing * 2;
-    padding-right: $base-spacing * 2;
+    padding-left: $base-spacing/2;
+    padding-right: $base-spacing/2;
+    @media (min-width: $medium) {
+        padding-left: $base-spacing;
+        padding-right: $base-spacing;
+    }
+    @media (min-width: $large) {
+        padding-left: $base-spacing * 2;
+        padding-right: $base-spacing * 2;
+    }
 }

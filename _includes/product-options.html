@@ -1,0 +1,12 @@
+<div class="product-options">
+    {% for item in page.product_options %}
+    <div class="product-option">
+        <label for="{{item.title | slugify}}">{{item.title | upcase}}</label>
+        <select id="{{item.title | slugify}}" name="{{{item.title | upcase}}" class="product-options">
+            {% for options in item.options %}
+            <option value="{{options | upcase}}">{{options| upcase}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    {% endfor %}
+</div>

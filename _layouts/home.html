@@ -5,10 +5,10 @@
         <a href="{{ product.url }}">
             <h1>{{ product.title }}</h1>
         </a>
-        {% if product.featured_image %}
+        {% if product.image %}
         <figure>
             <a href="{{ product.url }}">
-                <img src="/assets/images/product-images/{{product.featured_image}}" alt="Product Image" width="400"
+                <img src="/assets/images/product-images/{{product.image}}" alt="{{product.imageCaption}}" width="400"
                     height="400">
             </a>
             <figcaption>{{ product.imageCaption }}</figcaption>

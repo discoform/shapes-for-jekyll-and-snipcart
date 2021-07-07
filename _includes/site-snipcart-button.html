@@ -2,16 +2,30 @@
 < 1 %} <div class="sold-out">
         <h4>sold</h4>
         </div>
-        {% else %} {% if page.url == "/" %}
+        {% else %}
+        {% if page.url == "/" %}
         <a href="{{product.url}}"> <button class="snipcart-button-primary snipcart-base-button">
                         <strong>Purchase Info →</strong>
                 </button></a>
         {% else %}
         <button class="buy snipcart-add-item snipcart-button-primary snipcart-base-button"
-                data-item-id="{{ page.slug }}" data-item-name="{{ page.title }}" data-item-price="{{ page.price }}"
-                data-item-weight="{{ page.weight }}" data-item-url="{{ site.url }}{{ page.url }}"
-                data-item-image="{{ site.url }}/assets/images/product-images/{{page.featured_image}}"
-                data-item-description="{{page.excerpt}}">
-                Add to Cart
+                id="{{ page.title | slugify }}"
+                data-item-name="{{ page.title }}"
+                data-item-id="{{ page.title | slugify }}"
+                data-item-price="{{ page.price }}"
+                data-item-weight="{{ page.weight }}"
+                data-item-url="{{ site.url }}{{ page.url }}"
+                data-item-image="{{ site.url }}/assets/images/product-images/{{page.image}}"
+                data-item-description="{{page.subtitle}}"
+                {%- if page.product_options -%}
+                {%- for item in page.product_options %}
+                data-item-{{item.dataID}}-name="{{item.title}}"
+                data-item-{{item.dataID}}-options="{% for options in item.options %}{{ options }}{% if forloop.last %}{%- else %}|{% endif %}{% endfor %}"
+                data-item-{{item.dataID}}-required="true"
+                {%- endfor -%}
+                {%- endif -%}>
+                <span>Add to Cart</span>
         </button>
-        {% endif %}{% endif %}
+
+        {% endif %}
+        {% endif %}

@@ -1,0 +1,20 @@
+<section class="additional-info">
+    <!-- Tab links -->
+    <div class="tab">
+        {% for item in page.product_info_tabs %}
+        <button class="tablinks" onclick="openCity(event, '{{ item.title | camelcase | remove: ' ' }}')"
+            id="defaultOpen">{{item.title}}</button>
+        {% endfor %}
+    </div>
+    <!-- Tab content -->
+    {% for item in page.product_info_tabs %}
+    <div id="{{ item.title | camelcase | remove: ' ' }}" class="tabcontent">
+        <h3>{{item.title}}</h3>
+        <ul>
+            {% for item in item.list_items %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</section>
