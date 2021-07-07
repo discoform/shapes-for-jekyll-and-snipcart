@@ -3,14 +3,14 @@
     <div class="gallery-container">
         <figure>
             <img id="expandedImg" src="/assets/images/product-images/{{page.image}}" alt="{{page.imageCaption}}"
-                width="400" height="400">
+                width="400" height="600">
             <figcaption id="imgtext">{{ page.imageCaption }}</figcaption>
         </figure>
     </div>
     {% if page.thumbnail_images %}
     <div class="image-gallery column">
         <figure class="column">
-            <img src="/assets/images/product-images/{{page.image}}" alt="{{page.imageCaption}}" width="200" height="400"
+            <img src="/assets/images/product-images/{{page.image}}" alt="{{page.imageCaption}}" width="400" height="600"
                 onclick="myFunction(this);">
         </figure>
         {% for item in page.thumbnail_images %}
