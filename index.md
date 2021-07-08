@@ -4,5 +4,4 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 title: Shapes Micro-Commerce with Snipcart
-navigation_weight: 1
 ---
