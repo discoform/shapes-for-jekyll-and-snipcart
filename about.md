@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: page
 title: About
 permalink: /about/
 navigation_weight: 3
