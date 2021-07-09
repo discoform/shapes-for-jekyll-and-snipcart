@@ -1,30 +1,11 @@
-<strong>Follow us on Social Media</strong>
-<ul class="social-follow-links">
-    {% if site.twitter_username %}
-    <li>
-        <a href="https://twitter.com/{{ site.twitter_username }}">
-            <img src="/assets/icons/twitter.svg" alt="follow {{ site.title }} on Twitter">
-        </a>
-    </li>
-    {% endif %} {% if site.github_username %}
-
-    <li>
-        <a href="https://github.com/{{ site.github_username }}">
-            <img src="/assets/icons/github.svg" alt="follow {{ site.title }} on GitHub">
-        </a>
-    </li>
-    {% endif %} {% if site.linkedIn_username %}
-    <li>
-        <a href="https://www.linkedin.com/in/{{ site.linkedIn_username }}">
-            <img src="/assets/icons/linkedin.svg" alt="follow {{ site.title }} on LinkedIn">
-        </a>
-    </li>
-    {% endif %} {% if site.instagram_username %}
-    <li>
-        <a href="https://www.instagram.com/{{ site.instagram_username }}">
-            <img src="/assets/icons/instagram.svg" alt="follow {{ site.title }} on Instagram">
-
-        </a>
-    </li>
-    {% endif %}
-</ul>
+<div class="footer-widget">
+    <ul class="social-links">
+        {%- for item in site.data.siteSocial.socialWidget.items -%}
+        {% if item.display == true %}
+        <li class="social"><a aria-label="Follow {{site.title}} on {{ item.network }}" href="{{ item.url }}"
+                title="Follow {{site.title}} on {{ item.network }}" target="_blank"
+                rel="noreferrer">{{item.network}}</a></li>
+        {%- endif -%}
+        {% endfor %}
+    </ul>
+</div>

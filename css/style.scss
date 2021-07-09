@@ -27,8 +27,8 @@ $xl: 1200px;
 
 //Mixins
 
-@import "_mixins/_mixins";
-@import "_extends/extends";
+@import "_abstracts/_mixins";
+@import "_abstracts/buttons";
 
 ///////////////////////////
 
@@ -40,7 +40,6 @@ $xl: 1200px;
 @import "_layout/product-gallery";
 @import "_layout/product-single";
 @import "_components/site-header";
-@import "_components/navigation";
+@import "_components/site-navigation";
 @import "_components/site-footer";
 @import "_components/share-buttons";
-@import "_components/snipcart-button";

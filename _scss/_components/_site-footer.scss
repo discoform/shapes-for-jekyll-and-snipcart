@@ -1,20 +1,32 @@
 .site-footer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: center;
-    margin: ($base-spacing * 2) auto 0;
-    background: $black;
-    color: $white;
-    padding: $base-spacing*2;
+  background-color: $black;
+  color: $grey;
+  margin: $base-spacing auto 0;
+  padding: $base-spacing;
 
-    .footer-content {
-      @extend %centered-content;
-      padding:0;
-      a{
-          box-shadow: none;
-      }
-       
+  .footer-widget-container {
+    display: grid;
+    max-width: $max-width;
+    margin: 0 auto ;
+  }
+
+  section {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 $base-spacing * 2;
+
+    &:nth-child(2) {
+      border-top: 1px solid $grey;
+
     }
+    .footer-widget {
+      ul {
+        li {
+          display: inline-block;
+          margin-right: $base-spacing/2;
+        }
+      }
+    }
+  }
 }
-

@@ -1,0 +1,10 @@
+<nav id="main-menu" class="main-menu">
+    <a href="javascript:void(0);" title="Expand Menu" class="icon" onclick="mainNavigation()">
+        <img class="icon" src="/assets/icons/menu.svg" alt="Expand Main Menu">
+    </a>
+    <ul>
+        {%- for item in site.data.siteNavigation.mainNavigation.items -%}
+        <li><a href="{{ item.link }}">{{item.name | upcase }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>

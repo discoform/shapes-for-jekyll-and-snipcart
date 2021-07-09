@@ -1,0 +1,25 @@
+socialWidget:
+  display: true
+# add items here for additional social networks
+  items:
+    - network: Twitter
+      url: https://twitter.com/twitter
+      display: true
+    - network: Pinterest
+      url: https://www.pinterest.com/pinterest/
+      display: true
+    - network: YouTube
+      url: https://www.youtube.com/c/youtube/
+      display: true
+    - network: RSS Feed
+      url:
+      display: true
+socialShare:
+  display: true
+  socialCTA: "Share this:"
+# these items are strictly boolean
+  displayEmail: true
+  displayPinterest: true
+  displayTwitter: true
+  displayFacebook: true
+  displayReddit: true

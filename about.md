@@ -10,7 +10,7 @@ navigation_weight: 3
 ## {{site.description}}
 
 ---
- 
+
 
 # h1 Heading 8-)
 ## h2 Heading
