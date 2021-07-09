@@ -1,13 +1,10 @@
 {% include site-header.html %}
 <section class="product-gallery featured-products">
-    <h1 class="section-header">Featured Products</h1>
     {% for product in site.products %}
     {% if product.featured == true %}
     <article class="product">
         <div class="product-info">
-            <a href="{{ product.url }}">
-                <h1 class="product-title">{{ product.title }}</h1>
-            </a>
+            <h1 class="product-title">{{ product.title }}</h1>
             {% if product.description %}
             <p>{{product.description}}</p>
             {% endif %}
@@ -39,9 +36,7 @@
                 </a>
             </figure>
             {% endif %}
-            <a href="{{ product.url }}">
-                <h1 class="product-title">{{ product.title }}</h1>
-            </a>
+            <h1 class="product-title">{{ product.title }}</h1>
             {% if product.description %}
             <p>{{product.description}}</p>
             {% endif %}

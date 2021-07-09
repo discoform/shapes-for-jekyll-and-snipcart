@@ -2,7 +2,7 @@ body.product .product {
     display: grid;
     grid-column: 1 / 4;
     @media (max-width: $xl) {
-        gap: $base-spacing * 2;
+        gap: $base-spacing;
     }
     .product-images {
         grid-column: 1 / 4;
@@ -52,7 +52,6 @@ body.product .product {
 
             img {
                 cursor: pointer;
-
             }
         }
     }
@@ -91,6 +90,9 @@ body.product .product {
 
         .options-and-purchase {
             max-width: 320px;
+            @media (max-width: $medium) {
+                margin: auto;
+            }
 
             .product-options .product-option {
                 display: flex;
@@ -116,7 +118,7 @@ body.product .product {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         @media (min-width: $xl) {
-        margin: $base-spacing * 4 0 0;
+            margin: $base-spacing * 4 0 0;
         }
     }
 
