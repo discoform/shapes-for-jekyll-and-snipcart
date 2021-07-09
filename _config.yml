@@ -20,7 +20,7 @@
 title: Shapes ## Add your site title here
 subtitle: A micro-commerce Jekyll theme w/Snipcart ## Add your site subtitle here, this is useful for solcial sharing functions
 email: hello@discoform.com ## Add your email address here
-description: This is a Mockup, not an actual store ## Add your site description here
+description: ❗ This is a Mockup, not an actual store ## Add your site description here
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shapes-for-jekyll-and-snipcart.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
 logo: shapes-logo.svg ## Replace this with your logo in assets/logos/logo.png

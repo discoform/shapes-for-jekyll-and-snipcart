@@ -1,0 +1,19 @@
+.site-header {
+    .icon {
+        display: none;
+    }
+
+    nav.main-menu {
+        display: flex;
+        ul {
+            margin: auto;
+            font-weight: bold;
+
+            li {
+                display: inline-block;
+                margin-top: $base-spacing/2;
+                margin-right: $base-spacing/4;
+            }
+        }
+    }
+}

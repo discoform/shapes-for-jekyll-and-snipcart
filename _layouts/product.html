@@ -1,6 +1,5 @@
 {% include site-header.html %}
 <article class="product">
-
     <section class="title-and-description">
         <div>
             <h1>{{ page.title }}</h1>
@@ -9,9 +8,8 @@
                 <li><strong>Weight:</strong> {{page.weight}} ounces</li>
                 <li><strong>Shipping Time:</strong> {{page.shipping_time}}</li>
             </ul>
-            {% if page.quantity < 1 %}
-            <div class="sold-out"><span>Sorry, sold out</span>
-            {% else %}
+            {% if page.quantity < 1 %} <div class="sold-out"><span>Sorry, sold out</span>
+                {% else %}
                 <span class="product-price">${{page.price}}</span>
                 <div class="options-and-purchase">
                     {% if page.product_options %}
@@ -21,7 +19,9 @@
                     {% endif %}
                 </div>
         </div>
+        {%- if site.data.siteSocial.socialShare.display == true %}
         {% include site-share.html %}
+        {% endif %}
     </section>
     {% if page.image or page.thumbnail_images %}
     {% include product-gallery.html %}
@@ -29,26 +29,6 @@
     {% if page.product_info_tabs %}
     {% include product-info-tabs.html %}
     {% endif %}
-    <footer class="article-footer">
-        <aside id="left">
-            <strong>Site Map</strong>
-            <ul>
-                {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %} {% for p in navigation_pages
-                %} {%
-                if p.navigation_weight
-                %}
-                <li>
-                    <a href="{{ p.url }} " {% if p.url==page.url %} class="active" {% endif %}>{{ p.title }}</a>
-                </li>
-                {% endif %} {% endfor %}
-            </ul>
-        </aside>
-        {% if site.instagram_username or site.twitter_username or site.linkedIn_username or site.github_username %}
-        <aside id="right">
-            {%include site-social.html%}
-        </aside>
-        {% endif %}
-    </footer>
 </article>
 <!-- end .product -->
 {% include site-footer.html %}

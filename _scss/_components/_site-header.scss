@@ -54,4 +54,14 @@ header {
             left: $base-spacing/1.2;
         }
     }
+
+    .header-widgets{
+        display: flex;
+        justify-content: space-between;
+
+        > div{
+            margin-left: $base-spacing;
+        }
+
+    }
 }

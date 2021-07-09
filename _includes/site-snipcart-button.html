@@ -1,25 +1,29 @@
-
-<!-- display sold-out on homepage -->
-{% if page.url == "/" and product.quantity < 1  %}
-<h4>Sorry, sold out</h4>
-{% endif %}
-
-<!-- display button on homepage -->
-{% if page.url == "/" and product.quantity > 0 %}
-<a href="{{product.url}}"> <button class="snipcart-button-primary snipcart-base-button">
-<strong>Order Now</strong>
-</button></a>
-{% endif %}
-{% if page.layout == "product" and page.quantity > 0 %}
-<button class="buy snipcart-add-item snipcart-button-primary snipcart-base-button"
-id="{{ page.title | slugify }}" data-item-name="{{ page.title }}"
-data-item-id="{{ page.title | slugify }}" data-item-price="{{ page.price }}"
-data-item-weight="{{ page.weight }}" data-item-url="{{ site.url }}{{ page.url }}"
-data-item-image="{{ site.url }}/assets/images/product-images/{{page.image}}"
-data-item-description="{{page.subtitle}}" {%- if page.product_options -%} {%- for item in
-page.product_options %} data-item-{{item.dataID}}-name="{{item.title}}"
-data-item-{{item.dataID}}-options="{% for options in item.options %}{{ options }}{% if forloop.last %}{%- else %}|{% endif %}{% endfor %}"
-data-item-{{item.dataID}}-required="true" {%- endfor -%} {%- endif -%}>
-<span>Add to Cart</span>
-</button>
-{% endif %}
+{%- if site.Snipcart_API %}
+<!-- display sold out -->
+{% if page.url == "/" and product.quantity < 1 %} <h4>Sorry, sold out</h4>
+    {% endif %}
+    <!-- display button on homepage -->
+    {% if page.url == "/" and product.quantity > 0 %}
+    <a href="{{product.url}}"> <button class="snipcart-button-primary snipcart-base-button">
+            <strong>Order Now</strong>
+        </button></a>
+    {% endif %}
+    {% if page.layout == "product" and page.quantity > 0 %}
+    <!-- display button on product page -->
+    <button class="buy snipcart-add-item snipcart-button-primary snipcart-base-button" id="{{ page.title | slugify }}"
+        data-item-name="{{ page.title }}" data-item-id="{{ page.title | slugify }}" data-item-price="{{ page.price }}"
+        data-item-weight="{{ page.weight }}" data-item-url="{{ site.url }}{{ page.url }}"
+        data-item-image="{{ site.url }}/assets/images/product-images/{{page.image}}"
+        data-item-description="{{page.subtitle}}" {%- if page.product_options -%} {%- for item in page.product_options
+        %} data-item-{{item.dataID}}-name="{{item.title}}"
+        data-item-{{item.dataID}}-options="{% for options in item.options %}{{ options }}{% if forloop.last %}{%- else %}|{% endif %}{% endfor %}"
+        data-item-{{item.dataID}}-required="true" {%- endfor -%} {%- endif -%}>
+        <span>Add to Cart</span>
+    </button>
+    {% endif %}
+    {% else %}
+    <!-- display message if API Key isn't provided -->
+    <a href="{{product.url}}"> <button class="snipcart-button-primary snipcart-base-button">
+            <strong>To enable the shopping cart, add your Snipcart_API key to _config.yml</strong>
+        </button></a>
+    {% endif %}
