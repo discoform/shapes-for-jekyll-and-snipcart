@@ -1,6 +1,5 @@
 {% include site-header.html %}
 <section class="product-gallery featured-products">
-    <h1 class="section-header">Featured Products</h1>
     {% for product in site.products %}
     {% if product.featured == true %}
     <article class="product">
@@ -19,7 +18,6 @@
                 <img src="/assets/images/product-images/{{product.image}}" alt="{{product.imageCaption}}" width="400"
                     height="400">
             </a>
-            <figcaption>{{ product.imageCaption }}</figcaption>
         </figure>
         {% endif %}
     </article>
@@ -31,25 +29,23 @@
     {% for product in site.products %}
     {% if product.featured != true %}
     <article class="product">
+        {% if product.image %}
+        <figure>
+            <a href="{{ product.url }}">
+                <img src="/assets/images/product-images/{{product.image}}" alt="{{product.imageCaption}}" width="400"
+                    height="400">
+            </a>
+        </figure>
+        {% endif %}
         <div class="product-info">
-            {% if product.image %}
-            <figure>
-                <a href="{{ product.url }}">
-                    <img src="/assets/images/product-images/{{product.image}}" alt="{{product.imageCaption}}"
-                        width="400" height="400">
-                </a>
-                <figcaption>{{ product.imageCaption }}</figcaption>
-            </figure>
-            {% endif %}
             <a href="{{ product.url }}">
                 <h1 class="product-title">{{ product.title }}</h1>
             </a>
             {% if product.description %}
             <p>{{product.description}}</p>
             {% endif %}
-
+            {% include site-snipcart-button.html %}
         </div>
-        {% include site-snipcart-button.html %}
     </article>
     {% endif %}
     {% endfor %}

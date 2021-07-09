@@ -43,7 +43,7 @@ slug: Green-cactus
 category: plants
 tags: [little, Green, Plant]
 published: true
-featured:
+featured: true
 ---
 
 Many species of cactus have long, sharp spines, like this Opuntia. A cactus (plural cacti, cactuses, or less commonly, cactus) is a member of the plant family Cactaceae, a family comprising about 127 genera with some 1750 known species of the order Caryophyllales.
