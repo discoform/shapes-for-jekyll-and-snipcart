@@ -22,10 +22,11 @@ main {
 
 body.page {
     main {
+        grid-template-columns: 1fr 2fr 1fr;
+
         .the-content {
             grid-column: 1 / 4;
             text-align: justify;
-            max-width: 414px;
             margin: $base-spacing*2 auto;
 
             @media (min-width: $xl) {
