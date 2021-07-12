@@ -8,18 +8,9 @@ Shapes is a simple e-commerce theme for [Jekyll](https://jekyllrb.com/) and [Sni
 
 __You'll need a [Snipcart](https://snipcart.com/) account to use this theme.__ All the development is set up to support adding items to your cart from either the homepage or product page, so you'll simply need to add your Snipcart API to the _config.yml file and create your products.
 
-
 [VIEW THE DEMO](https://shapes-for-jekyll-and-snipcart.netlify.app)
 
-
-
 Issues and enhancements are welcome. [You can find the project board here](https://github.com/discoform/shapes-for-jekyll-and-snipcart/projects/1).
-
-
-<a class="btn-dtn" href="https://app.netlify.com/start/deploy?repository=https://github.com/discoform/shapes-for-jekyll-and-snipcart">
-    <img src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify">
-  </a>
-
 
 ---
 
@@ -52,10 +43,3 @@ In the `_data` directory you'll find files to handle the following site componen
 ## Contact Form
 
 A simple HTML contact form with the [Netlify data attribution](https://docs.netlify.com/forms/setup/) is added. This should work out of the box if you're using Netlify for hosting, otherwise you can replace this with your own solution.
-
-
-
----
-
-## Deploy Status
-[![Netlify Status](https://api.netlify.com/api/v1/badges/468ba6f2-1ecf-484f-8f50-9a87321992fe/deploy-status)](https://app.netlify.com/sites/shapes-for-jekyll-and-snipcart/deploys)
