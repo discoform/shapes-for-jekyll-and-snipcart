@@ -1,4 +1,4 @@
-body.home .product-gallery {
+body.home .product-gallery, body.products .all-products {
     grid-column: 1 / 4;
     display: grid;
     gap: $base-spacing/2;
@@ -92,7 +92,7 @@ body.home .product-gallery {
     }
 }
 // recent products (bottom section)
-.product-gallery.recent-products {
+.product-gallery.recent-products, .product-gallery.all-products {
     grid-template-columns: repeat(2, 1fr);
 
     @media (min-width: $xl) {

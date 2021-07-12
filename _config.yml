@@ -37,7 +37,7 @@ instagram_username: instagram #if you have a Instagram account, add your usernam
 collections:
       products:
         output: true
-        permalink: /product/:path/
+        permalink: /products/:path/
 
 defaults:
   - scope:
@@ -55,7 +55,6 @@ Snipcart_API: MGU4ZGQ1YjItZWU3Ni00OTkwLWE0NzMtMmZhYWVjZjIxODc5NjM2MjgzOTM4OTY3Mj
 plugins:
   - jekyll-seo-tag
   - jekyll-autoprefixer
-  - jekyll-feed
 ###########################################################################
 ## STANDARD BUILD and DEV SETTINGS ##
 ###########################################################################
