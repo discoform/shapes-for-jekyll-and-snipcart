@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/assets/images/favicons/favicon.png">
     <link rel="stylesheet" href="/css/style.css">
     {% seo %}
+    {% include custom-css.html%}
 </head>
+
 <body class={{page.layout}}>
     <header class="site-header">
         <div>
             <a href="/">
                 {% if site.logo %}
-                <img src="/assets/logos/{{site.logo}}" alt="{{site.title}} Site Logo" width="400" height="400">
+                <img class="site-logo" src="/assets/logos/{{site.logo}}" alt="{{site.title}} Site Logo" width="400"
+                    height="400">
                 {% else %}
                 <h1>{{site.title}}</h1>
                 {% endif %}
