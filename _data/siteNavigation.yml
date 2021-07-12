@@ -10,6 +10,8 @@ footerNavigation:
   items:
   - name: Home
     link: /
+  - name: All Products
+    link: /products/
   - name: About
     link: /about/
   - name: Contact

@@ -10,4 +10,4 @@ gem "jekyll", "~> 4.0"
 gem 'jekyll-seo-tag'
 gem "execjs", "~> 2.7.0"
 gem "jekyll-autoprefixer", "~> 1.0.2"
-gem 'jekyll-feed'
+gem 'jekyll-sitemap'
