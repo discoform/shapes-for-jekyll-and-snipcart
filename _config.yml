@@ -19,10 +19,10 @@
 ###########################################################################
 title: Shapes ## Add your site title here
 subtitle: A micro-commerce Jekyll theme w/Snipcart ## Add your site subtitle here, this is useful for solcial sharing functions
-email: hello@discoform.com ## Add your email address here
+email:  ## Add your email address here
 description: ❗ This is a Mockup, not an actual store ## Add your site description here
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://shapes-for-jekyll-and-snipcart.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://shapes-for-jekyll-and-snipcart.netlify.app" # replace this with the base hostname & protocol for your site, e.g. http://example.com
 logo: shapes-logo.svg ## Replace this with your logo in assets/logos/logo.png
 ###########################################################################
 ## SOCIAL MEDIA ACCOUNT VARIABLES. ADD MORE OPTIONS AND EDIT _includes/site-social.html ##
@@ -48,13 +48,14 @@ defaults:
 ###########################################################################
 ## SNIPCART API ## 
 ###########################################################################
-Snipcart_API: #MGU4ZGQ1YjItZWU3Ni00OTkwLWE0NzMtMmZhYWVjZjIxODc5NjM2MjgzOTM4OTY3MjkwNjE3 ##Log in to your Snipcart account and go here: https://app.snipcart.com/dashboard/account/credentials
+Snipcart_API: MGU4ZGQ1YjItZWU3Ni00OTkwLWE0NzMtMmZhYWVjZjIxODc5NjM2MjgzOTM4OTY3MjkwNjE3 ## Replace this with your Snipcart API creds here. Log in to your Snipcart account and go here: https://app.snipcart.com/dashboard/account/credentials
 ###########################################################################
 ## STANDARD PLUGINS ##
 ###########################################################################
 plugins:
   - jekyll-seo-tag
   - jekyll-autoprefixer
+  - jekyll-feed
 ###########################################################################
 ## STANDARD BUILD and DEV SETTINGS ##
 ###########################################################################

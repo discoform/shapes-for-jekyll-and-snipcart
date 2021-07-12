@@ -12,7 +12,7 @@ socialWidget:
       url: https://www.youtube.com/c/youtube/
       display: true
     - network: RSS Feed
-      url:
+      url: https://shapes-for-jekyll-and-snipcart.netlify.app/feed.xml
       display: true
 socialShare:
   display: true
