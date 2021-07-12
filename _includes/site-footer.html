@@ -2,26 +2,22 @@
 <footer class="site-footer">
     <div class="footer-widget-container">
         <section>
-            <div class="footer-widget">
-                <p>{{site.description}}</p>
-            </div>
             {%- if site.data.siteNavigation.footerNavigation.display == true %}
-            <div class="footer-widget">
+            <div class="footer-widget menus">
                 <ul class="site-links">
                     {% for item in site.data.siteNavigation.footerNavigation.items -%}
                     <li><a href="{{ site.baseurl }}{{ item.link }}">{{ item.name}}</a></li>
                     {% endfor -%}
                 </ul>
+                {%- if site.data.siteSocial.socialWidget.display == true %}
+                {% include site-social.html %}
+                {%- endif -%}
             </div>
             {%- endif -%}
-        </section>
-        <section>
             <div class="footer-widget colophon">
                 <p>© {{ site.time | date: '%Y' }} - {{site.title}}</p>
+                <p><a href="https://github.com/discoform/shapes-for-jekyll-and-snipcart" target="_blank">Shapes Theme for Jekyll</a></p>
             </div>
-            {%- if site.data.siteSocial.socialWidget.display == true %}
-            {% include site-social.html %}
-            {%- endif -%}
         </section>
     </div>
 </footer>
@@ -37,4 +33,5 @@
 </script>
 {% endif %}
 </body>
+
 </html>
