@@ -1,6 +1,6 @@
 # Shapes
 
-![Shapes Screenshot](https://repository-images.githubusercontent.com/142916390/6c79ea3a-3986-4cf4-b0c9-65101e3a6672)
+![Shapes Screenshot](https://repository-images.githubusercontent.com/142916390/3a3e76ba-4974-40e3-99ec-336976270796)
 
 Shapes is a simple e-commerce theme for [Jekyll](https://jekyllrb.com/) and [Snipcart](https://snipcart.com/). Best used for small shops with limited inventory.
 
