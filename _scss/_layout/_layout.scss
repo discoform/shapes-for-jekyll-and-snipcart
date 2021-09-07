@@ -2,36 +2,85 @@ body {
     background-color: $grey;
 }
 
-main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $base-spacing;
+main,
+header {
+    @include container-padding;
     max-width: $max-width;
     margin: auto;
-    padding-left: $base-spacing/2;
-    padding-right: $base-spacing/2;
-    @media (min-width: $medium) {
-        padding-left: $base-spacing;
-        padding-right: $base-spacing;
-    }
-    @media (min-width: $large) {
-        padding-left: $base-spacing * 2;
-        padding-right: $base-spacing * 2;
-    }
+
 }
 
-body.page {
-    main {
-        grid-template-columns: 1fr 2fr 1fr;
 
-        .the-content {
-            grid-column: 1 / 4;
-            text-align: justify;
-            margin: $base-spacing*2 auto;
+//////////////////////////////////////////
+// set white space around content sections
+//////////////////////////////////////////
 
-            @media (min-width: $xl) {
-                grid-column: 2 / 3;
+section {
+    margin:0 0 $base-spacing  0;
+    @media (min-width: $large) {
+        margin:0 0 $base-spacing * 2  0;
 
+
+    }
+
+}
+
+// ////////////////////////////////////////
+// add some dimention to images (excluding icon images)
+// ////////////////////////////////////////
+
+img:not(.icon) {
+    box-shadow: $shadow;
+}
+
+//////////////////////////////////
+// tabbed content on product pages
+////////////////////////////////
+
+.product-info-tabs {
+    grid-column: 1 / 4;
+
+    .tab {
+        overflow: hidden;
+    }
+
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+        background-color: $white;
+        margin: 0;
+        padding: $base-spacing/2 $base-spacing;
+        opacity: 0.8;
+        border: 1px solid $grey;
+        box-shadow: $shadow;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: $white;
+        box-shadow: $shadow;
+        opacity: 1;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: $base-spacing;
+        background-color: $white;
+        box-shadow: $shadow;
+
+        ul {
+            margin: $base-spacing;
+            max-width: 700px;
+            li {
+                list-style-type: disc;
+                list-style-position: outside;
+                font-size: 0.8rem;
+                opacity: 0.8;
             }
         }
     }

@@ -1,37 +1,39 @@
-</main>
 <footer class="site-footer">
-    <div class="footer-widget-container">
-        <section>
-            {%- if site.data.siteNavigation.footerNavigation.display == true %}
-            <div class="footer-widget menus">
-                <ul class="site-links">
-                    {% for item in site.data.siteNavigation.footerNavigation.items -%}
-                    <li><a href="{{ site.baseurl }}{{ item.link }}">{{ item.name}}</a></li>
-                    {% endfor -%}
-                </ul>
-                {%- if site.data.siteSocial.socialWidget.display == true %}
-                {% include site-social.html %}
-                {%- endif -%}
-            </div>
-            {%- endif -%}
-            <div class="footer-widget colophon">
-                <p>© {{ site.time | date: '%Y' }} - {{site.title}}</p>
-                <p><a href="https://github.com/discoform/shapes-for-jekyll-and-snipcart" target="_blank">Shapes Theme for Jekyll</a></p>
-            </div>
-        </section>
-    </div>
+    <section class="footer-widgets">
+        {%- if site.data.siteNavigation.footerNavigation.display == true %}
+        <div class="footer-widget">
+            <ul class="site-links">
+                {% for item in site.data.siteNavigation.footerNavigation.items -%}
+                <li><a href="{{ site.baseurl }}{{ item.link }}">{{ item.name}}</a></li>
+                {% endfor -%}
+            </ul>
+        </div>
+        {%- endif -%}
+        {%- if site.data.siteSocial.socialWidget.display == true %}
+        <div class="footer-widget">
+            {% include site-social.html %}
+        </div>
+        {%- endif -%}
+        <div class="footer-widget">
+            <ul>
+                <li>© {{ site.time | date: '%Y' }} - {{site.title}} </li>
+                <li><a href="https://github.com/discoform/shapes-for-jekyll-and-snipcart" target="_blank">Shapes Theme
+                        for Jekyll</a></li>
+            </ul>
+        </div>
+    </section>
 </footer>
+</main>
 {%- if site.Snipcart_API %}
 {% include site-snipcart-assets.html %}
 {% endif %}
+<!-- main navigation -->
+<script src="/js/navigation.js"></script>
 {% if page.layout == 'product' %}
 <script src="/js/gallery-images.js"></script>
 <script src="/js/tabbed-content.js"></script>
-<script>
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-</script>
 {% endif %}
+
 </body>
 
 </html>

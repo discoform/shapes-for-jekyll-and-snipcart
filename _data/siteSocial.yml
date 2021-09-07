@@ -16,7 +16,6 @@ socialWidget:
       display: true
 socialShare:
   display: true
-  socialCTA: "Share this:"
 # these items are strictly boolean
   displayEmail: true
   displayPinterest: true

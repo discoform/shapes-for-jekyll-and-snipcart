@@ -1,5 +1,18 @@
 {% include site-header.html %}
+<article class="{{ page.layout }}">
     <section class="the-content">
         {{content}}
     </section>
+    {% if page.title == "Contact" %}
+    <aside role="complementary">
+        {% include contact-form.html %}
+    </aside>
+    {% endif %}
+
+    {% if page.title == "About" %}
+    <aside role="complementary">
+        {% include newsletter-form.html %}
+    </aside>
+    {% endif %}
+</article>
 {% include site-footer.html %}

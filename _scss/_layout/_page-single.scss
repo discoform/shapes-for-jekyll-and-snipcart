@@ -1,0 +1,33 @@
+body.page {
+    article.page {
+        min-height: 80vh;
+
+        .the-content {
+            grid-column: 1 / 2;
+            grid-row: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        aside {
+            max-width: 450px;
+
+        }
+
+        @media (min-width: $large) {
+            display: grid;
+            gap: $base-spacing * 3;
+
+            aside {
+                grid-column: 3 / 4;
+                grid-row: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin:  auto;
+
+            }
+        }
+    }
+}

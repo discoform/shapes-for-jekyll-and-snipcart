@@ -1,9 +1,11 @@
 body.product .product {
     display: grid;
     grid-column: 1 / 4;
+
     @media (max-width: $xl) {
         gap: $base-spacing;
     }
+
     .product-images {
         grid-column: 1 / 4;
         grid-row: 1;
@@ -16,6 +18,8 @@ body.product .product {
 
         img {
             margin-top: unset;
+            margin-bottom: $base-spacing/2;
+
             box-shadow: $shadow;
         }
         .gallery-container {
@@ -44,27 +48,26 @@ body.product .product {
                 align-items: center;
                 margin: 0 auto;
 
-                img{
+                img {
                     margin-bottom: 0;
                 }
-
             }
 
             @media (min-width: $xl) {
                 grid-column: 1 / 2;
                 width: 150px;
-
             }
 
             img {
                 cursor: pointer;
-
             }
         }
     }
     .title-and-description {
         grid-column: 1 / 4;
         grid-row: 2;
+        color:$black;
+
 
         > div {
             padding: $base-spacing;
@@ -75,6 +78,7 @@ body.product .product {
         }
 
         @media (min-width: $large) {
+
             max-width: 360px;
             grid-column: 3 / 4;
             grid-row: 1;
@@ -117,94 +121,5 @@ body.product .product {
                 }
             }
         }
-    }
-
-    .article-footer {
-        grid-column: 1 / 4;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        @media (min-width: $xl) {
-            margin: $base-spacing * 4 0 0;
-        }
-    }
-
-    .additional-info {
-        grid-column: 1 / 4;
-        @media (min-width: $xl) {
-            margin: $base-spacing * 4 0 0;
-        }
-
-        .tab {
-            overflow: hidden;
-            border-bottom: 1px solid $grey;
-        }
-
-        /* Style the buttons that are used to open the tab content */
-        .tab button {
-            background-color: $white;
-            margin: 0;
-            border-right: 1px solid $grey;
-            border-bottom: 1px solid $grey;
-            padding: $base-spacing/2 $base-spacing;
-            opacity: 0.8;
-            border: 1px solid $grey;
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: $white;
-            border-bottom: 1px solid $grey;
-            box-shadow: $shadow, 0px 0px 3px $grey;
-            margin-left: 1px;
-            opacity: 1;
-            border-radius: $radius $radius 0 0;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: $base-spacing;
-            background-color: $white;
-            box-shadow: $shadow;
-
-            ul {
-                margin: $base-spacing;
-                max-width: 700px;
-                li {
-                    list-style-type: disc;
-                    list-style-position: outside;
-                    font-size: 0.8rem;
-                    opacity: 0.8;
-                }
-            }
-        }
-    }
-}
-
-.sold-out {
-    font-family: $headings;
-    font-weight: bolder;
-    display: block;
-    margin-top: $base-spacing/2;
-    margin-bottom: $base-spacing/2;
-
-    .product-images & {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: $white;
-        box-shadow: $shadow;
-        padding: $base-spacing/4;
-    }
-
-    .title-and-description & {
-        font-size: 2.5rem;
-        font-weight: bolder;
-        display: block;
     }
 }

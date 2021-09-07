@@ -8,17 +8,21 @@
         </figure>
     </div>
     {% if page.thumbnail_images %}
+    <!-- thumbnail image gallery -->
     <div class="image-gallery column">
+        <!-- main thumbnail image -->
         <figure class="column">
             <img src="/assets/images/product-images/{{page.image}}" alt="{{page.imageCaption}}" width="400" height="600"
-                onclick="myFunction(this);">
+                onclick="expandImages(this);">
         </figure>
         {% for item in page.thumbnail_images %}
+        <!-- additional thumbnail images -->
         <figure class="column">
             <img src="/assets/images/product-images/{{item.image}}" alt="{{item.caption}}" width="200" height="400"
-                onclick="myFunction(this);">
+                onclick="expandImages(this);">
         </figure>
         {% endfor %}
     </div>
     {% endif %}
 </section>
+

@@ -1,21 +1,107 @@
-.site-header {
-    .icon {
-        display: none;
+nav#main-menu {
+    display: none;
+    overflow: hidden;
+    &.responsive {
+        display: flex;
+        flex-direction: column;
+        ul {
+            list-style-type: none;
+            font-weight: bolder;
+
+            li {
+                border-bottom: 1px solid $black;
+                padding: $base-spacing/2 $base-spacing/2 0 0;
+            }
+        }
+        a.snipcart-checkout {
+            order: 3;
+            display: block;
+            float: right;
+            color: var(--color-buttonPrimary, #fff);
+            background-color: var(--bgColor-buttonPrimary, #1a4db3);
+            border-radius: 4px;
+            cursor: pointer;
+            margin: $base-spacing/2 0 0;
+            padding: $base-spacing/2;
+            font-weight: bolder;
+
+            svg {
+                background-color: $white;
+                padding: 4px;
+                margin: -4px 5px 0 0;
+                border-radius: 100%;
+            }
+            &::after {
+                content: "View Cart →";
+            }
+        }
+        .search-container {
+            order: 2;
+            form {
+                margin-top: $base-spacing;
+                padding: 0;
+            }
+
+            input {
+                margin: 0;
+            }
+        }
     }
 
-    nav.main-menu {
+    // desktop adjustments
+
+    @media (min-width: $large) {
         display: flex;
+
         ul {
-            margin: auto;
-            font-weight: bold;
+            margin: auto 0;
+            padding: 0 $base-spacing 0 0;
 
             li {
                 display: inline-block;
-                margin-right: $base-spacing/2;
-                &:last-of-type {
-                    margin-right: unset;
+                margin: auto;
+
+                a {
+                    padding: $base-spacing/2;
                 }
             }
         }
+        a.snipcart-checkout {
+            padding: 0 0 0 $base-spacing;
+        }
+        .search-container {
+            margin: auto;
+            min-width: 300px;
+            form {
+                padding: 0;
+                margin: $base-spacing;
+            }
+            form,
+            input {
+                margin: 0;
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////
+// trigger for the mobile navigation is hidden on larger screens
+////////////////////////////////////////////////////////////////
+
+a.icon {
+    width: 34px;
+    grid-column: 2;
+    margin-left: auto;
+
+    @media (min-width: $large) {
+        display: none;
+    }
+}
+
+a.snipcart-checkout {
+    display: flex;
+
+    svg {
+        margin: auto;
     }
 }

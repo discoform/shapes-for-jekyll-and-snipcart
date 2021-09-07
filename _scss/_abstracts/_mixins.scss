@@ -3,3 +3,15 @@
     transition: all 0.1s ease-in;
     transition: all 0.1s ease-out;
 }
+
+
+@mixin container-padding{
+
+        padding-left: $base-spacing;
+        padding-right: $base-spacing;
+
+    @media (min-width: $large) {
+        padding-left: $base-spacing * 2;
+        padding-right: $base-spacing * 2;
+    }
+}

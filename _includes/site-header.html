@@ -6,38 +6,25 @@
     <link rel="icon" type="image/png" href="/assets/images/favicons/favicon.png">
     <link rel="stylesheet" href="/css/style.css">
     {% seo %}
-    {% include custom-css.html%}
 </head>
 
 <body class={{page.layout}}>
     <header class="site-header">
-        <div>
-            <a href="/">
-                {% if site.logo %}
-                <img class="site-logo" src="/assets/logos/{{site.logo}}" alt="{{site.title}} Site Logo" width="400"
-                    height="400">
-                {% else %}
-                <h1>{{site.title}}</h1>
-                {% endif %}
-            </a>
-        </div>
-        <div class="header-widgets">
+        <div class="header-content">
+
+            <a href="/"><h1 class="site-title">{{site.title}}</h1></a>
+
+
             {%- if site.data.siteNavigation.mainNavigation.display == true %}
-            {% include site-navigation.html%}
+            {% include site-navigation.html %}
             {%- endif -%}
-            {%- if site.Snipcart_API %}
-            <div class="snipcart-summary">
-                <a href="#" class="snipcart-checkout" title="View Cart">
-                    <span class="snipcart-items-count"></span>
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="snipcart-cart-header__icon snipcart__icon">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M51.714 20.47L55 60H9l3.286-39.53h9.857v-6.588C22.143 8.424 26.556 4 32 4c5.444 0 9.857 4.424 9.857 9.882v6.589h9.857zM25.43 13.883v16.47h-3.286v-6.587h-6.834l-2.737 32.94h38.856l-2.737-32.94h-6.834v6.588h-3.286v-16.47c0-3.634-2.947-6.589-6.571-6.589-3.624 0-6.571 2.955-6.571 6.588zm3.285 9.883V20.47h6.572v3.294h-6.572z"
-                            fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            {%- endif -%}
+            <a href="javascript:void(0);" title="Expand Menu" class="icon" onclick="mainNavigation()">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 8.9"
+                    style="enable-background:new 0 0 11 8.9;" xml:space="preserve">
+                    <path class="st0" d="M11,3.2H0V2.3h11V3.2z M11,4H0v0.9h11V4z M11,5.7H0v0.9h11V5.7z" />
+                </svg>
+            </a>
         </div>
     </header>
     <main>

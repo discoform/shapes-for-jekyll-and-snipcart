@@ -1,71 +1,67 @@
 form {
-
-	border: 1px solid;
+	box-shadow: $shadow;
 	padding: $base-spacing;
 	margin-top: $base-spacing;
-    background-color: $white;
-    text-align: left;
+	background-color: $white;
+
 
 
 }
 
-	fieldset,
-	input,
-	optgroup,
+fieldset,
+input,
+optgroup,
+textarea {
+	padding: $base-spacing/2;
+	margin: $base-spacing/2 0 $base-spacing 0;
+	border: 2px solid $black;
+}
 
-	textarea {
-		padding: $base-spacing/2;
-		margin: $base-spacing/2 0 $base-spacing 0;
-		border:2px solid $black;
-	}
+textarea {
+	width: 100%;
+	min-height: 150px;
+}
 
-	textarea {
-		width: 100%;
-		min-height: 150px;
-	}
+label,
+legend {
+	margin: $base-spacing / 4 0;
+	font-weight: bolder;
+}
 
-	label,
-	legend {
+[type="email"],
+[type="text"] {
+	width: 100%;
+}
 
-		margin: $base-spacing / 4 0;
-		font-weight: bolder;
-	}
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	width: auto;
+	cursor: pointer;
+	appearance: button;
+	line-height: inherit;
+	margin: auto;
+}
 
-	[type="email"],
-	[type="text"] {
-		width: 100%;
-	}
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus {
+	outline: 0;
+}
 
-	[type="button"],
-	[type="reset"],
-	[type="submit"] {
-		width: auto;
-		cursor: pointer;
-		appearance: button;
-		line-height: inherit;
-		margin: auto;
-	}
+[type="reset"],
+[type="submit"] {
+	margin-bottom: 0;
+}
 
-	[type="button"]:focus,
-	[type="reset"]:focus,
-	[type="submit"]:focus {
-		outline: 0;
-	}
+select {
+	text-transform: none;
+}
 
-	[type="reset"],
-	[type="submit"] {
-		margin-bottom: 0;
-	}
+[type="checkbox"] {
+	appearance: checkbox;
+}
 
-	select {
-		text-transform: none;
-	}
-
-	[type="checkbox"] {
-		appearance: checkbox;
-	}
-
-	[type="radio"] {
-		appearance: radio;
-	}
-
+[type="radio"] {
+	appearance: radio;
+}

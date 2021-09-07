@@ -1,24 +1,3 @@
 {% include site-header.html %}
-<section class="product-gallery all-products">
-    <h1 class="section-header">All Products</h1>
-    {% for product in site.products %}
-    <article class="product">
-        {% if product.image %}
-        <figure>
-            <a href="{{ product.url }}">
-                <img src="/assets/images/product-images/{{product.image}}" alt="{{product.imageCaption}}" width="400"
-                    height="400">
-            </a>
-        </figure>
-        {% endif %}
-        <div class="product-info">
-            <h1 class="product-title">{{ product.title }}</h1>
-            {% if product.description %}
-            <p>{{product.description}}</p>
-            {% endif %}
-            {% include site-snipcart-button.html %}
-        </div>
-    </article>
-    {% endfor %}
-</section>
+{% include products-grid.html %}
 {% include site-footer.html %}

@@ -6,7 +6,7 @@ Shapes is a simple e-commerce theme for [Jekyll](https://jekyllrb.com/) and [Sni
 
 ## Getting Started
 
-__You'll need a [Snipcart](https://snipcart.com/) account to use this theme.__ All the development is set up to support adding items to your cart from either the homepage or product page, so you'll simply need to add your Snipcart API to the _config.yml file and create your products.
+__You'll need a [Snipcart](https://snipcart.com/) account to use this theme.__ All the development is set up to support adding items to your cart from the product page. Simply add your [Snipcart API Key](https://app.snipcart.com/dashboard/account/credentials) to the _config.yml file and create your products.
 
 [VIEW THE DEMO](https://shapes-for-jekyll-and-snipcart.netlify.app)
 

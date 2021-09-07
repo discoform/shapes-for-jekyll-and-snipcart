@@ -1,5 +1,4 @@
-$stdvgap: 1.125rem !default; // 18px
-$stdhgap: 1.25rem !default; // 20px
+
 
 html {
     // better box-sizing (opinionated)
@@ -31,7 +30,6 @@ body {
 
     // body shouldn't have a margin (opinionated)
     margin: 0;
-    background: $white;
 }
 
 /**
@@ -322,16 +320,7 @@ ul li {
     line-height: 1.5;
 }
 
-p,
-pre,
-hr,
-ul {
-    margin: $stdvgap 0;
-}
 
-blockquote {
-    margin: $stdvgap ($stdhgap * 1.6);
-}
 
 a,
 button {
@@ -353,8 +342,10 @@ svg {
     height: auto;
     vertical-align: middle;
     border: none;
-    margin: ($base-spacing / 2) auto;
+
 }
+
+
 
 svg {
     overflow: hidden;
@@ -379,8 +370,7 @@ body:not(:-moz-handler-blocked) fieldset {
 }
 
 legend {
-    margin-left: $stdhgap * -0.25;
-    padding: 0 ($stdhgap * 0.25);
+
     border: none;
 }
 
@@ -395,7 +385,6 @@ main {
 }
 
 table {
-    margin: $stdvgap 0;
     border-collapse: collapse;
     border-spacing: 0;
 }
@@ -413,12 +402,4 @@ iframe {
 optgroup {
     font-weight: 700;
 }
-
-button {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-
 
