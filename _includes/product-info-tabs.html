@@ -2,7 +2,7 @@
     <!-- Tab links -->
     <div class="tab">
         {% for item in page.product_info_tabs %}
-        <button class="tablinks" onclick="openCity(event, '{{ item.title | camelcase | remove: ' ' }}')"
+        <button class="tablinks" onclick="displayTab(event, '{{ item.title | camelcase | remove: ' ' }}');"
             id="defaultOpen">{{item.title}}</button>
         {% endfor %}
     </div>
