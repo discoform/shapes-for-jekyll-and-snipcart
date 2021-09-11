@@ -5,14 +5,12 @@
 // -----------------------------------------------------------------------------
 
 .site-header {
-    padding: $base-spacing/2  $base-spacing;
+    padding: $base-spacing/2 $base-spacing;
 
     .header-content {
         display: grid;
         justify-content: space-between;
         align-items: center;
-
-
 
         #main-menu {
             grid-row: 2;
@@ -22,6 +20,7 @@
         .site-title {
             word-break: break-word;
             font-size: 2rem;
+            margin-bottom: initial;
         }
         ul {
             margin: 0;
@@ -37,21 +36,7 @@
             .site-title {
                 font-size: 3rem;
             }
-            > div {
-                display: grid;
 
-                &:first-of-type {
-                    grid-column: 1;
-                    justify-content: left;
-                    display: flex;
-                    flex-direction: column;
-                    max-width: calc(100% - #{$base-spacing * 3});
-                }
-                &:nth-last-of-type(1) {
-                    grid-column: 2;
-                    display: flex;
-                }
-            }
         }
     }
 

@@ -11,6 +11,7 @@ h4,
 h5,
 h6 {
     font-family: $headings;
+    margin-bottom: $base-spacing/2;
 }
 
 h1 {
@@ -18,7 +19,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.428rem;
+    font-size: 1.728rem;
 }
 
 h3,
@@ -36,8 +37,14 @@ a {
     line-height: 1.5;
 }
 
+p a{
+    display: inline;
+
+}
+
 a {
     display: inline-block;
+
 }
 
 /*  Links Within Paragraphs*/
