@@ -12,9 +12,11 @@ fieldset,
 input,
 optgroup,
 textarea {
+	display: inline-block;
 	padding: $base-spacing/2;
 	margin: $base-spacing/2 0 $base-spacing 0;
 	border: 2px solid $black;
+
 }
 
 textarea {
