@@ -1,11 +1,9 @@
-<div class="footer-widget">
-    <ul class="social-links">
-        {%- for item in site.data.siteSocial.socialWidget.items -%}
-        {% if item.display == true %}
-        <li class="social"><a aria-label="Follow {{site.title}} on {{ item.network }}" href="{{ item.url }}"
-                title="Follow {{site.title}} on {{ item.network }}" target="_blank"
-                rel="noreferrer">{{item.network}}</a></li>
-        {%- endif -%}
-        {% endfor %}
-    </ul>
-</div>
+<ul class="social-links">
+    {%- for item in site.data.siteSocial.socialWidget.items -%}
+    {% if item.display == true %}
+    <li class="social"><a aria-label="Follow {{site.title}} on {{ item.network }}" href="{{ item.url }}"
+            title="Follow {{site.title}} on {{ item.network }}" target="_blank" rel="noreferrer">{{item.network}}</a>
+    </li>
+    {%- endif -%}
+    {% endfor %}
+</ul>

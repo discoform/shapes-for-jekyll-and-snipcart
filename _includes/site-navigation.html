@@ -1,11 +1,9 @@
 <nav id="main-menu" class="topnav">
-    <ul>
-        {%- for item in site.data.siteNavigation.mainNavigation.items -%}
+    <ul>{% for item in site.data.siteNavigation.mainNavigation.items %}
         <li><a href="{{ item.link }}">{{item.name | upcase }}</a></li>
-        {% endfor %}
+        {%- endfor %}
         {%- if site.Snipcart_API %}
-
-        {%- endif -%}
+        {%- endif %}
     </ul>
     <div class="search-container">
         <form>
