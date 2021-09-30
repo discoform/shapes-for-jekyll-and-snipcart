@@ -13,6 +13,7 @@ input,
 optgroup,
 textarea {
 	display: inline-block;
+	width: 100%;
 	padding: $base-spacing/2;
 	margin: $base-spacing/2 0 $base-spacing 0;
 	border: 2px solid $black;
