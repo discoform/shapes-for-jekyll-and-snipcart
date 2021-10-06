@@ -3,7 +3,7 @@ body {
 }
 
 main,
-header {
+header, .footer-content {
     @include container-padding;
     max-width: $max-width;
     margin: auto;
