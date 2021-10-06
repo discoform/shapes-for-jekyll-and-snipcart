@@ -1,93 +1,71 @@
 .product-gallery.featured-products {
-    grid-template-columns: repeat(1, 1fr);
-
-    article {
-        grid-column: 1 / 4;
+    .product {
         display: grid;
-
-.product-info{
-    color:$black;
-
-}
-
-        @media (max-width: $large - 1px) {
-            .product-info {
-                grid-row: 1;
-                grid-column: 1 / 1;
-                z-index: 2;
-                text-align: center;
-                margin: auto auto 0;
-                width: 90%;
-                max-width: 620px;
-                padding: $base-spacing;
-                background-color: $white;
-                box-shadow: $shadow;
-
-                .product-title {
-                    font-size: 1.5rem;
-
-                }
-
-                button {
-                    padding: 5px 10px;
-                }
-            }
-
-            figure {
-                grid-row: 1;
-                grid-column: 1 / 1;
-                margin: auto auto $base-spacing * 4 auto;
-            }
-        }
-
         // if there is more than one featured product, add some margin
         &:nth-child(n + 2) {
             margin-top: $base-spacing;
         }
+    }
+    @media (max-width: $large - 1px) {
+        .product {
+            .product-info {
+                grid-row: 1;
+                grid-column: 1;
+                z-index: 2;
+                margin: auto auto 0;
+                width: 85%;
+                max-width: 560px;
+                text-align: center;
+                padding: $base-spacing * 1.5 $base-spacing;
+                background-color: $white;
+                color: initial;
 
-        @media (min-width: $medium) and (max-width: $large - 1px) {
-            // add a little more breathing room and bump the title size up
-            .product-info  .product-title {
-                    font-size: 2rem;
+                box-shadow: $shadow;
 
+                .product-title {
+                    font-size: 1.5rem;
+                }
             }
-            // if there is more than one featured product, add some margin
-            &:nth-child(n + 2) {
-                margin-top: $base-spacing * 2;
+            figure {
+                grid-row: 1;
+                grid-column: 1;
+                margin: auto auto $base-spacing * 4 auto;
             }
         }
+    }
 
-        @media (min-width: $large) {
+    @media (min-width: $large) {
+        .product {
+            grid-template-columns: 414px 1fr;
+
             background-color: $white;
+            color: initial;
+
             padding: $base-spacing;
+            gap: $base-spacing * 1.5;
             box-shadow: $shadow;
-            gap: $base-spacing;
 
             .product-info {
                 grid-row: 1;
                 grid-column: 2 / 2;
-                margin: auto;
+                margin: auto auto auto 0;
 
                 .product-title {
                     font-size: 2.5rem;
                 }
             }
-            figure {
-                grid-column: 1 / 1;
-                min-width: 414px;
-                margin: auto auto auto 0;
-            }
+
             // if there is more than one featured product, add some margin
             &:nth-child(n + 2) {
                 margin-top: $base-spacing * 2;
             }
         }
+    }
 
-        @media (min-width: $xl) {
+    @media (min-width: $xl) {
+        .product {
+            grid-template-columns: 640px 1fr;
             gap: $base-spacing * 2;
-            .product-info .product-title {
-                font-size: 3rem;
-            }
         }
     }
 }
