@@ -3,7 +3,7 @@
     <section class="footer-content">
         {%- if site.data.siteNavigation.footerNavigation.display == true %}
         <div class="footer-widget">
-            <h4>Site Navigation</h4>
+            <p class="widget-title">Site Navigation</p>
             <ul class="site-links">
                 {% for item in site.data.siteNavigation.footerNavigation.items -%}
                 <li><a href="{{ site.baseurl }}{{ item.link }}">{{ item.name}}</a></li>
@@ -13,27 +13,25 @@
         {%- endif -%}
         {%- if site.data.siteSocial.socialWidget.display == true %}
         <div class="footer-widget">
-            <h4>Social Links</h4>
+            <p class="widget-title">Social Links</p>
             {% include site-social.html %}
         </div>
         {%- endif -%}
         <div class="footer-widget">
-            <h4>Colophon</h4>
+            <p class="widget-title">Colophon</p>
             <ul>
-                <li>© {{ site.time | date: '%Y' }} - {{site.title}} </li>
-                <li></li>
+                <li>© {{site.title}} {{ site.time | date: '%Y' }}</li>
             </ul>
         </div>
     </section>
     <section class="footer-content">
         <div class="footer-widget">
-            <h4>Use this theme</h4>
-            <a href="https://github.com/discoform/shapes-for-jekyll-and-snipcart" target="_blank">Shapes Theme for
+            <p class="widget-title">Use this theme</p>
+            <a href="https://github.com/discoform/shapes-for-jekyll-and-snipcart" target="_blank" rel="noopener noreferrer">Shapes Theme for
                 Jekyll</a>
         </div>
     </section>
 </footer>
-
 {%- if site.Snipcart_API %}
 {% include site-snipcart-assets.html %}
 {% endif %}
@@ -43,7 +41,5 @@
 <script src="/js/gallery-images.js"></script>
 <script src="/js/tabbed-content.js"></script>
 {% endif %}
-
 </body>
-
 </html>
