@@ -1,6 +1,7 @@
 nav#main-menu {
     display: none;
     overflow: hidden;
+
     &.responsive {
         display: flex;
         flex-direction: column;
@@ -8,13 +9,24 @@ nav#main-menu {
             list-style-type: none;
             font-weight: bolder;
 
+            margin-top: $base-spacing/2;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow-x: scroll;
 
             li {
-                border-bottom: 1px solid $black;
-                padding: $base-spacing/2 $base-spacing/2 0 0;
-                a{
-                    display: block;
-                    padding: $base-spacing/2 0;
+                padding: $base-spacing/2 0;
+                display: inline;
+                line-height: 1;
+                overflow: hidden;
+                a {
+                    border:1px solid $black;
+                    background-color: $white;
+                    padding: $base-spacing/2;
+                    border-radius: $base-spacing/5;
+                    line-height: 1;
+                    font-size: 0.9rem;
+                    font-weight: bolder;
                 }
             }
         }
@@ -43,8 +55,8 @@ nav#main-menu {
             width: 250px;
 
             form {
-                margin-top: $base-spacing;
                 padding: 0;
+                margin-bottom: $base-spacing/2;
             }
 
             input {
