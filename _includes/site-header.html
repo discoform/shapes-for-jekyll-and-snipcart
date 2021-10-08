@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/assets/images/favicons/favicon.png">
-<link rel="stylesheet" href="/css/style.css">
- {% seo -%}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    {% seo -%}
 </head>
+
 <body class="{{page.layout}}">
     <header class="site-header">
         <div class="header-content">
-            <a href="/"><h1 class="site-title">{{site.title}}</h1></a>
+            <a href="/">
+                {%- if site.logo and site.displayLogo == true %}
+                <img class="site-logo" src="/assets/logos/{{site.logo}}" width="400" height="200" title="{{site.title}}" alt="{{ site.title }} logo">
+                {% else %}
+                <h1 class="site-title">{{site.title}}</h1>
+                {% endif %}
+            </a>
             {%- if site.data.siteNavigation.mainNavigation.display == true %}
             {% include site-navigation.html %}
             {%- endif -%}

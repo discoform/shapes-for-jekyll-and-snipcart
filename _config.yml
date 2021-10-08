@@ -23,7 +23,8 @@ email:  ## Add your email address here
 description: ❗ This is a Mockup, not an actual store ## Add your site description here
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shapes-for-jekyll-and-snipcart.netlify.app" # replace this with the base hostname & protocol for your site, e.g. http://example.com
-logo: shapes-logo.svg ## Replace this with your logo in assets/logos/logo.png
+logo: transparent-logo.png ## Replace this with your logo in assets/logos/your-logo.{file-type}
+displayLogo: false ## should the logo be displayed in the header? strictly boolean ( true / false )
 ###########################################################################
 ## SOCIAL MEDIA ACCOUNT VARIABLES. ADD MORE OPTIONS AND EDIT _includes/site-social.html ##
 ###########################################################################
