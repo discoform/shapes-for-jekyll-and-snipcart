@@ -29,7 +29,7 @@ section {
 // add some dimention to images (excluding icon images)
 // ////////////////////////////////////////
 
-img:not(.icon) {
+img:not(.icon, .site-logo) {
     box-shadow: $shadow;
 }
 
