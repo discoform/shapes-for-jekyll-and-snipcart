@@ -1,18 +1,25 @@
 .product-gallery.all-products {
+
+
+
+
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $base-spacing;
+    font-size: 0.9rem;
 
     .section-header {
         grid-column: 1 / 3;
     }
     .product {
+        text-align: center;
         figure {
-            margin-bottom: $base-spacing/2;
+            margin-bottom: $base-spacing;
         }
 
         .product-title {
-            font-size: 1rem;
+            font-weight: bolder;
         }
     }
 
