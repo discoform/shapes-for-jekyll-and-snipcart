@@ -12,11 +12,11 @@
                 grid-row: 1;
                 grid-column: 1;
                 z-index: 2;
-                margin: auto auto 0;
+                margin: auto auto $base-spacing;
                 width: 85%;
                 max-width: 560px;
                 text-align: center;
-                padding: $base-spacing * 1.5 $base-spacing;
+                padding: $base-spacing * 1.5 $base-spacing $base-spacing ;
                 background-color: $white;
                 color: initial;
 

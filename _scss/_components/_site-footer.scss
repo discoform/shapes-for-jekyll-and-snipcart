@@ -13,6 +13,14 @@
 
         .footer-widget {
             margin-bottom: $base-spacing;
+
+            ul li {
+                display: inline-block;
+                a {
+                    display: block;
+                    margin-right: $base-spacing/2;
+                }
+            }
         }
         .widget-title {
             font-weight: bolder;
@@ -30,6 +38,11 @@
         @media (min-width: $medium) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            .footer-widget {
+                ul li {
+                    display: block;
+                }
+            }
             a {
                 display: block;
                 padding: $base-spacing/4 0;
