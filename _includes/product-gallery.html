@@ -11,13 +11,13 @@
     <!-- thumbnail image gallery -->
     <div class="image-gallery column">
         <!-- main thumbnail image -->
-        <figure class="column">
-            <img src="/assets/images/product-images/{{page.image}}" alt="{{page.imageCaption}}" width="400" height="600"
+        <figure>
+            <img src="/assets/images/product-images/{{page.image}}" alt="{{page.imageCaption}}" width="640" height="900"
                 onclick="expandImages(this);">
         </figure>
         {% for item in page.thumbnail_images %}
         <!-- additional thumbnail images -->
-        <figure class="column">
+        <figure>
             <img src="/assets/images/product-images/{{item.image}}" alt="{{item.caption}}" width="200" height="400"
                 onclick="expandImages(this);">
         </figure>

@@ -1,5 +1,5 @@
 form {
-	box-shadow: $shadow;
+
 	padding: $base-spacing;
 	margin-top: $base-spacing;
 	background-color: $white;
@@ -16,7 +16,7 @@ textarea {
 	width: 100%;
 	padding: $base-spacing/2;
 	margin: $base-spacing/2 0 $base-spacing 0;
-	border: 2px solid $black;
+	border: 1px solid $black;
 
 }
 
