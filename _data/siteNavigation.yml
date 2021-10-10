@@ -5,6 +5,8 @@ mainNavigation:
     link: /about/
   - name: Contact
     link: /contact/
+  - name: Products
+    link: /products/
 footerNavigation:
   display: true
   items:

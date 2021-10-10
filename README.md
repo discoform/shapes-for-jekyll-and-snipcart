@@ -1,4 +1,3 @@
-# Shapes
 
 ![Shapes Screenshot](https://repository-images.githubusercontent.com/142916390/3a3e76ba-4974-40e3-99ec-336976270796)
 
