@@ -26,7 +26,7 @@ Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jek
 
 
 ### [Jekyll Autoprefixer](https://github.com/vwochnik/jekyll-autoprefixer)
-This plugin provides simple autoprefixer support for Jekyll. To ensure compatibility with the latest version of JekyllI've clamped the `execjs` gem to version 2.7.0, [per this issue](https://github.com/ai/autoprefixer-rails/issues/160)
+This plugin provides simple autoprefixer support for Jekyll. To ensure compatibility with the latest version of Jekyll. I've clamped the `execjs` gem to version 2.7.0, [per this issue](https://github.com/ai/autoprefixer-rails/issues/160)
 
 ---
 
