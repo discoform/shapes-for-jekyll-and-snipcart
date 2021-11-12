@@ -1,0 +1,53 @@
+# _data/picture.yml
+
+presets:
+  default:
+      markup: auto
+      nomarkdown: false
+      formats: [original]
+      widths: [312, 366, 414, 640, 720, 800]
+      fallback_width: 640
+      fallback_format: original
+      quality: 90
+      data_sizes: true
+      dimension_attributes: true
+      attributes:
+        img: loading="lazy" data-sizes="auto"
+  thumbnail:
+      markup: auto
+      nomarkdown: false
+      formats: [original]
+      widths: [350]
+      fallback_width: 350
+      fallback_format: original
+      quality: 85
+      data_sizes: true
+      dimension_attributes: true
+      attributes:
+        img: loading="lazy" data-sizes="auto"'
+  gallery_main:
+      markup: direct_url
+      nomarkdown: false
+      formats: [original]
+      widths: [640]
+      fallback_width: 640
+      fallback_format: original
+      quality: 85
+      data_sizes: true
+      dimension_attributes: false
+      attributes:
+        img: id="expandedImg" loading="lazy" data-sizes="auto"
+  gallery_main_thumbnail:
+      markup: direct_url
+      nomarkdown: false
+      formats: [original]
+      widths: [140]
+      fallback_format: original
+      quality: 85
+      data_sizes: true
+      dimension_attributes: false
+      attributes:
+        img:  loading="lazy" data-sizes="auto"  onclick="expandImages(this);"
+
+
+

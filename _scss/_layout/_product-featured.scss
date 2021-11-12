@@ -6,8 +6,10 @@
             margin-top: $base-spacing;
         }
     }
-    @media (max-width: $large - 1px) {
+    @media (max-width: ($large - 1px)) {
         .product {
+            max-width: 560px;
+            margin: auto;
             .product-info {
                 grid-row: 1;
                 grid-column: 1;
@@ -16,7 +18,7 @@
                 width: 85%;
                 max-width: 560px;
                 text-align: center;
-                padding: $base-spacing * 1.5 $base-spacing $base-spacing ;
+                padding: $base-spacing * 1.5 $base-spacing $base-spacing;
                 background-color: $white;
                 color: initial;
 
@@ -35,6 +37,9 @@
     }
 
     @media (min-width: $large) {
+        padding: $base-spacing;
+        background-color: $offwhite;
+
         .product {
             grid-template-columns: 414px 1fr;
 
@@ -63,6 +68,7 @@
     }
 
     @media (min-width: $xl) {
+        padding: $base-spacing * 2;
         .product {
             grid-template-columns: 640px 1fr;
             gap: $base-spacing * 2;

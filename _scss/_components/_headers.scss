@@ -37,6 +37,7 @@
     @media (min-width: $large) {
         .header-content {
             padding: $base-spacing 0;
+            margin-top: $base-spacing * 2;
             margin-bottom: $base-spacing * 2;
 
             #main-menu {
