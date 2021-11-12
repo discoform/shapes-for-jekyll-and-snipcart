@@ -6,8 +6,7 @@
         {% if product.image %}
         <figure>
             <a href="{{ product.url }}">
-                <img src="/assets/images/product-images/{{product.image}}" alt="{{product.imageCaption}}" width="400"
-                    height="400">
+                {% picture thumbnail  /assets/images/product-images/{{product.image}} --alt {{product.imageCaption}} %}
             </a>
         </figure>
         {% endif %}

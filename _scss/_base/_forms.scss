@@ -1,11 +1,7 @@
 form {
-
 	padding: $base-spacing;
 	margin-top: $base-spacing;
 	background-color: $white;
-
-
-
 }
 
 fieldset,
@@ -17,7 +13,6 @@ textarea {
 	padding: $base-spacing/2;
 	margin: $base-spacing/2 0 $base-spacing 0;
 	border: 1px solid $black;
-
 }
 
 textarea {
@@ -69,8 +64,18 @@ select {
 	appearance: radio;
 }
 
+.newsletter-signup {
+	form {
+		max-width: 500px;
+		margin: auto;
+	}
 
-.newsletter-signup form{
-	max-width: 500px;
-	margin: auto;
+	body.home & {
+		background-color: $offwhite;
+		padding: $base-spacing * 2;
+		margin-top: $base-spacing * 4;
+		form {
+			box-shadow: $shadow;
+		}
+	}
 }

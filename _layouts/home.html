@@ -13,8 +13,7 @@
         {% if product.image %}
         <figure>
             <a href="{{ product.url }}">
-                <img src="/assets/images/product-images/{{product.image}}" alt="{{product.imageCaption}}" width="400"
-                    height="400">
+                {% picture /assets/images/product-images/{{product.image}} --alt {{product.imageCaption}} %}
             </a>
         </figure>
         {% endif %}
@@ -23,4 +22,5 @@
     {% endfor %}
 </section>
 {% include products-grid.html %}
+{% include newsletter-form.html %}
 {% include site-footer.html %}

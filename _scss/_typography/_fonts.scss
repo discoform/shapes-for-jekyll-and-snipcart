@@ -2,6 +2,7 @@ $headings: Arial, Helvetica, sans-serif;
 $body: Helvetica, sans-serif;
 body {
     font-family: $body;
+
 }
 
 h1,
@@ -14,20 +15,6 @@ h6 {
     margin-bottom: $base-spacing/2;
 }
 
-h1 {
-    font-size: 2.242rem;
-}
-
-h2 {
-    font-size: 1.728rem;
-}
-
-h3,
-h4,
-h5,
-h6 {
-    font-size: 1.514rem;
-}
 
 /* Paragraphs and Links */
 p,
@@ -51,10 +38,10 @@ a {
 
 p a {
     color: inherit;
-    box-shadow: inset 0px -7px 0px $highlight;
+font-weight: 400;
 
     &:hover {
-        box-shadow: inset 0px -100px 10px $highlight;
+        box-shadow: inset 0px -100px 10px $offwhite;
         transition: all ease 0.3s;
     }
 }

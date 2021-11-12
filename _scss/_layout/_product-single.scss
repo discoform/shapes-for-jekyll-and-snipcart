@@ -1,4 +1,6 @@
 body.product .product {
+    max-width: $max-width;
+    margin: auto;
     display: grid;
     grid-column: 1 / 4;
     gap: $base-spacing;
@@ -34,13 +36,8 @@ body.product .product {
         color: $black;
 
         > div {
-            padding: $base-spacing;
-            &:first-of-type {
-                box-shadow: $shadow;
-                background-color: $white;
-                color: initial;
+            padding: 0 0 $base-spacing;
 
-            }
         }
 
         .shipping-details {
@@ -92,7 +89,6 @@ body.product .product {
             margin-left: 0 !important;
         }
         .title-and-description {
-            max-width: 360px;
             grid-column: 3 / 4;
             grid-row: 1;
             margin-left: auto;
