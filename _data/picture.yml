@@ -13,6 +13,18 @@ presets:
       dimension_attributes: true
       attributes:
         img: loading="lazy" data-sizes="auto"
+  noLazy:
+      markup: auto
+      nomarkdown: false
+      formats: [original]
+      widths: [312, 366, 414, 640, 720, 800]
+      fallback_width: 640
+      fallback_format: original
+      quality: 90
+      data_sizes: true
+      dimension_attributes: true
+      attributes:
+        img: data-sizes="auto"
   thumbnail:
       markup: auto
       nomarkdown: false
