@@ -13,7 +13,7 @@
         {% if product.image %}
         <figure>
             <a href="{{ product.url }}">
-                {% picture /assets/images/product-images/{{product.image}} --alt {{product.imageCaption}} %}
+                {% picture noLazy /assets/images/product-images/{{product.image}} --alt {{product.imageCaption}} %}
             </a>
         </figure>
         {% endif %}
