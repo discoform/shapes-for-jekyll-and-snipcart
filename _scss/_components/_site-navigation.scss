@@ -84,6 +84,11 @@ nav#main-menu {
         }
         a.snipcart-checkout {
             padding: 0 0 0 $base-spacing;
+
+            svg{
+                height: 24px;
+                width: 24px;
+            }
         }
         .search-container {
             margin: auto;
